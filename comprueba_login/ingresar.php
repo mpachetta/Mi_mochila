@@ -39,7 +39,7 @@ try{
                 $_SESSION['user']=$_POST['usuario'];
 
                 
-                echo "<button id='iniciar'><a href='lectus.php'>Iniciar</a></button>";
+                echo "<button id='ir_zona_juegos'><a href='zona_juegos.php'>Iniciar</a></button>";
             }else{
 
                 echo "La contraseña es incorrecta. <br>Intente nuevamente.";

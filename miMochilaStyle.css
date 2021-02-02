@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+#contenedor {
+
+   width: 360px;
+   margin: auto;
+   height: 620px;
+   box-shadow: 3px 3px 5px;
+   padding: 2px;
+ 
+}
+
+
+#usuName{
+
+   background-color: rgb(93, 170, 221);
+   height: 100%;
+}
+
+#cabecera{
+    background-color: rgb(93, 170, 221);
+}
+#usuName img, #cabecera img{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width:150px;
+}
+
+#usuName h1, #cabecera h1{
+    text-align: center;
+    margin-top: 1px;
+    font-family: 'Sigmar One', cursive;
+    font-size: 45px;
+    color: rgb(127, 255, 52);
+
+}
+
+#usuName input,cabecera input{
+    display: block;
+   font-size:15px;
+margin: 10px auto;
+
+
+}
+
+#usuName button, #cabecera button{
+    display: block;
+    margin:10px auto;
+}
+
+
+#form{
+    padding:5px 20px;
+    text-align: center;
+}
+
+.mensaje,
+#usuName p {
+   font-size: 30px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: white;
+   text-align:center
+
+}
+
+
+
+#ir_zona_juegos{
+
+   font-size: 14px;
+   padding: 15px;
+   border-radius: 5px;
+width:150px;
+
+}
+
+#ir_zona_juegos{
+   background-color: rgb(43, 226, 89);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.b_usuname{
+   font-size:16px;
+   margin:10px;
+   width:150px;
+   padding:3px;
+   
+   
+}
+a:link, a:visited, a:active {
+   text-decoration:none;
+   color:black;
+}
+
+#salir{
+   background-color: rgb(240, 14, 14);
+   
+}
+
+#salir a{
+   color:white;
+}
