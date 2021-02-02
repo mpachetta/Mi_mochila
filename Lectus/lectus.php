@@ -102,6 +102,7 @@
 
             </div>
             <button id="jugar" disabled=true>JUGAR</button>
+            <button class="b_usuname" id="salir"><a href="../comprueba_login\cerrar_sesion.php">Salir del juego</a></button>
         </div>
 
 

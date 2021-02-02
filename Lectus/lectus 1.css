@@ -439,3 +439,12 @@ a:link, a:visited, a:active {
    text-decoration:none;
    color:black;
 }
+
+#salir{
+   background-color: rgb(240, 14, 14);
+   
+}
+
+#salir a{
+   color:white;
+}
