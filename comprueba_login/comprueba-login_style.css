@@ -1,0 +1,41 @@
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    margin:5px auto;
+    
+    padding: 20px;
+}
+
+form input{
+    margin-bottom: 10px;
+
+
+}
+
+form label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+
+}
+#respuesta{
+    margin: 10px auto;
+    
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+}
+
+.boton_form{
+    width:100px;
+    margin: auto;
+    
+}
+
+#barra{
+    text-align: right;
+}
+
+

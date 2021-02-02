@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Fjalla+One&display=swap');
+
+.lectus{
+    font-family: 'Averia Serif Libre', cursive;
+    font-size: 60px;
+}
+
+#contenedor {
+
+   width: 360px;
+   margin: auto;
+   position: relative;
+   height: 620px;
+   box-shadow: 3px 3px 5px;
+   padding: 2px;
+
+}
+
+
+
+
+
+#botonera {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+
+}
+#tablero{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   overflow: auto;
+}
+#botonera {
+   position: absolute;
+   bottom: 30px;
+   padding: 2px;
+   width: 98%;
+   height: 56px;
+
+}
+
+#borrar,
+#comprobar {
+   font-size: 1.1em;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   border-radius: 6px;
+
+
+}
+
+#comprobar {
+   background-color: lightskyblue;
+}
+
+#tablero button {
+
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;
+   border: lightgray 1px solid;
+   padding: 5px 10px;
+   border-radius: 10px;
+   font-size: 25px;
+   line-height: 40px;
+   
+   text-align: center;
+   margin: 5px 5px;
+
+}
+
+
+#tablero button:hover {
+   cursor: pointer;
+}
+
+#pizarra {
+
+  
+   border-radius: 5px;
+   margin: 15px 5px 0px;
+   text-transform: uppercase;
+   padding: 5px 10px;
+   background-image: url("globo_dialogo.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   display: flex;
+   min-height: 180px;
+   max-height: 280px;
+   flex-wrap: wrap;
+   align-items: flex-start;
+  
+   overflow: auto;
+   align-content: flex-start;
+   
+
+}
+
+#pizarra p {
+   display: inline;
+   font-size: 30px;
+
+   color: rgb(0, 0, 0);
+   font-family: 'Fjalla One', sans-serif;
+   margin: 5px 5px 1px 5px;
+
+}
+
+
+#pantallaCont,
+#pantallaNiv {
+
+   width: 360px;
+   background-color: rgb(93, 170, 221);
+   position: absolute;
+   height: 620px;
+   top: 2px;
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+#pantallaIni {
+
+   width: 360px;
+   background-color: rgb(93, 170, 221);
+   position: absolute;
+   height: 620px;
+   top: 2px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+#usuName{
+
+   width: 360px;
+   background-color: rgb(93, 170, 221);
+   position: absolute;
+   height: 620px;
+   top: 2px;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+#usuName input{
+   font-size:15px;}
+
+
+#pantallaEval {
+
+   width: 360px;
+   background-color: rgb(93, 170, 221);
+   position: absolute;
+   height: 280px;
+   bottom: 2px;
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+#pantallaNiv {
+
+   width: 360px;
+   background-color: rgb(252, 252, 252);
+   position: absolute;
+   height: 620px;
+   top: 2px;
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+
+#pts {
+
+   width: 150px;
+   height: 100px;
+   background-color: rgb(0, 0, 0);
+   border: solid 3px white;
+   font-size: 45px;
+   font-family: sans-serif;
+   color: orange;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.mensaje,
+#usuName p {
+   font-size: 30px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: white;
+   text-align:center
+
+}
+.mensaje1{
+   font-size: 30px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: white;
+
+}
+
+#n_usuario {
+   font-size: 25px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bolder;
+   color: rgb(48, 23, 23);
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   
+   padding:5px 20px;
+   border-radius: 5px;
+   
+}
+#usuarioSmall {
+   font-size: 25px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bolder;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+   text-align: center;
+   padding:5px;
+   border-radius: 5px;
+   
+}
+
+#continuar,
+#jugar,
+#iniciar,
+#reintentar,
+.irNiveles {
+
+   font-size: 18px;
+   padding: 15px;
+   border-radius: 5px;
+width:150px;
+}
+
+#iniciar{
+   background-color: rgb(43, 226, 89);
+}
+#trofeos {
+   height: 150px;
+}
+
+#nuevoIntento {
+   background-color: rgba(110, 110, 109);
+   color: white;
+   font-family: sans-serif;
+   text-transform: uppercase;
+   padding: 20px;
+   
+   position: absolute;
+   width: 330px;
+   height: 220px;
+   bottom: 2px;
+   display: none;
+   flex-direction: column;
+   flex-wrap: wrap;
+   z-index: 2;
+   justify-content: center;
+   align-items: center;
+
+
+}
+
+#nuevoIntento p {
+   text-align: center;
+   font-size: 25px;
+   font-weight: bolder;
+}
+#nivelLectura{
+   height:80px;
+   
+   
+}
+#nivelLectura div{
+   display: flex;
+   flex-direction: row;
+   align-items: baseline;
+   justify-content: center;
+   align-content: center;
+   padding: 20px 5px 8px;
+   background-color: rgb(230, 230, 250,0.3);
+   border-radius: 15px;
+}
+
+
+#nivelLectura div label{
+   font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#leoSolo{
+   width:30px;
+   margin:0px 10px;
+   transform: scale(1.2);
+   cursor:pointer;
+
+}
+
+#caja_locucionOracion{
+   display:flex;
+   justify-content: center;
+   margin-bottom: 20px;;
+}
+
+#locucionOracion{
+   width:30px;
+   height:30px;
+   background-image: url("image/voice.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 30px;
+   border: none;
+   box-shadow: 1px 1px 2px gray;
+   
+}
+#niveles{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+#niveles div img{
+   width: 100px;
+   margin: 10px;
+}
+
+#niveles div p{
+   text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#niveles button{
+   width:100px;
+   height:100px;
+   border:none;
+   background-color: white;
+}
+
+#niveles button:focus{
+   transform:scale(0.9);
+}
+footer{
+   margin-top:25px;
+   text-align: center;
+   font-size:0.8em;
+   width:320px;
+}
+
+#b_inicio{
+   
+   background-image: url("image/ico_inicio.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#b_personas{
+   
+   background-image: url("image/ico_personas.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#b_casa{
+   
+   background-image: url("image/ico_casa.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#b_escuela{
+   
+   background-image: url("image/ico_escuela.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#b_mascotas{
+   
+   background-image: url("image/ico_mascotas.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+#b_comida{
+   background-image: url("image/ico_comida.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+#avance{
+   position:absolute;
+   
+   width:300px;
+   height:60px;
+   top:5px;
+   left:8%;
+   
+}
+
+#barra{
+   border:1px solid;
+   height:20px;
+   width:300px;
+   border-radius:10px;
+   overflow: hidden;
+   
+}
+#rellenoBarra{
+   height:20px;
+   background-color: green;
+   width: 0%;
+   border-radius:10px;
+   
+}
+.b_usuname{
+   font-size:16px;
+   margin:10px;
+   width:150px;
+   padding:3px;
+   
+   
+}
+a:link, a:visited, a:active {
+   text-decoration:none;
+   color:black;
+}
