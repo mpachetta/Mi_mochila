@@ -21,7 +21,11 @@
             <div id="logo"><img src="image/lectus.png" alt="logo" width="180px"></div>
 
             <p class="mensaje">¡HOLA!</p>
-            <?php echo '<span id="n_usuario">'.$_SESSION['user'].'</span>'?>
+            <?php
+            if(isset($_SESSION['user'])){
+            echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+            }
+            ?>
             <button class="irNiveles">CONTINUAR</button>
             <footer>
                 <hr>
@@ -65,7 +69,11 @@
         </div>
         <div id="pantallaCont">
             <div id="trofeos"><img src="image/won.png" alt="trofeo" width="150px"></div>
-            <?php echo '<span id="n_usuario">'.$_SESSION['user'].'</span>'?>
+            <?php
+            if(isset($_SESSION['user'])){
+            echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+            }
+            ?>
             <p class="mensaje">¡COMPLETASTE EL NIVEL!</p>
             <button class="irNiveles">CONTINUAR</button>
         </div>
@@ -79,7 +87,11 @@
                     <div id="rellenoBarra"></div>
                 </div>
             </div>
-            <?php echo '<span id="n_usuario">'.$_SESSION['user'].'</span>'?>
+            <?php
+            if(isset($_SESSION['user'])){
+            echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+            }
+            ?>
             <div id="niveles">
                 <div><button id="b_inicio" value="inicio"></button>
                     <p>INICIO</p>
