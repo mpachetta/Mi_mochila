@@ -26,6 +26,11 @@
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             }
             ?>
+                        <form action="" id="nivelLectura">
+
+<div><label for="">Leo solo</label><input type="range" name="leoSolo" id="leoSolo" min="0" max="1"
+        step="1" value="0"><label for="">Necesito ayuda</label></div>
+</form>
             <button class="irNiveles">CONTINUAR</button>
             <footer>
                 <hr>
