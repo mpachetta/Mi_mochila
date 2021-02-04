@@ -99,7 +99,7 @@ let locuciones = new Array();
     $("#jugar").click(darOracion);
     $("#continuar").click(()=>{
         
-        if(puntos < 20){
+        if(puntos < 100){
 
             limpieza();
 

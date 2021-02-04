@@ -1,6 +1,5 @@
- <?php echo session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
-
 <head>
     <title>Lectus</title>
     <link rel="icon" type="image/x-icon" href="image/fav_lectus.png" />
@@ -48,9 +47,11 @@ e.preventDefault();
 
 function procesarDatos (datos_devueltos){
     
-    console.log(datos_devueltos);
-    $("#puntos_juego").val(datos_devueltos);
-
+    <?php
+    if(isset($_SESSION['user'])){
+    echo '$("#puntos_juego").val(datos_devueltos)';
+    }
+?>
 }
 
 function verErrores(){
@@ -157,9 +158,15 @@ function success(){
             <?php
             if(isset($_SESSION['user'])){
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+            include ('get_puntos.php');
+            
+            echo '<span>Puntos: </span>';
+            echo '<input disabled=true type="text" id="puntos_juego" value="';
+            echo $puntos=pedir_puntos();
+            echo '"></input>';
             }
             ?>
-            <span>Puntos: </span><input disabled=true type='text' id="puntos_juego"></input>
+
             <div id="niveles">
                 <div><button id="b_inicio" value="inicio"></button>
                     <p>INICIO</p>
