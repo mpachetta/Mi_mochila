@@ -1,5 +1,6 @@
-$(function () {
 
+$(function () {
+    
     // let n_usuario;
     let listas = new Array();
 let locuciones = new Array();
@@ -98,7 +99,7 @@ let locuciones = new Array();
     $("#jugar").click(darOracion);
     $("#continuar").click(()=>{
         
-        if(puntos < 100){
+        if(puntos < 20){
 
             limpieza();
 
@@ -163,7 +164,7 @@ let locuciones = new Array();
                 locucion = "sound/kon.mp3";
             };
             sound.setAttribute("src", locucion);
-            console.log(sound)
+           
         });
 
 
@@ -221,10 +222,11 @@ let locuciones = new Array();
         $(parrafosPizarra[long]).remove();
 
     })
+   
 
 
     $("#comprobar").click(() => {
-
+        
         let aciertos = [];
 
         for (var i = 0; i < correcto.length; i++) {
@@ -241,6 +243,9 @@ let locuciones = new Array();
         if (verificar == false) {
 
             puntos = parseInt(puntos) + 10;
+
+            
+            
             $("#pts").empty().append(puntos);
             nivel = nivel + 1;
             // $("#pizarra").empty();

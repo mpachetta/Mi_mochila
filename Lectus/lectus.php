@@ -1,4 +1,4 @@
-<?php session_start() ?>
+ <?php echo session_start(); ?>
 <!DOCTYPE html>
 
 <head>
@@ -6,11 +6,68 @@
     <link rel="icon" type="image/x-icon" href="image/fav_lectus.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="lectus 1.css">
     <script src="lectus 1.js"></script>
     <script src="lectus 1_listas.js"></script>
     <script src="pantallas.js"></script>
+    <style>
+    #puntos_juego{
+   text-align: center;
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+    </style>
+<script>
+
+$(function(){
+set_puntos();
+
+});
+let set_puntos = ()=>{
+$("#punteador").on("submit",(e)=>{
+e.preventDefault();
+    var datos_puntaje=$("#punteador").serialize();
+
+    
+    $.ajax({
+        'type':"POST",
+        'url':'set_puntos.php',
+        'data':datos_puntaje,
+        'success':procesarDatos
+
+});
+    
+})
+};
+
+
+function procesarDatos (datos_devueltos){
+    
+    console.log(datos_devueltos);
+    $("#puntos_juego").val(datos_devueltos);
+
+}
+
+function verErrores(){
+
+    var msg="Ooops, ocurrió un error inesperado";
+
+    $("#respuesta").html("<p>"+msg+"</p>");
+
+
+}
+
+function success(){
+    console.log("success")
+}
+
+
+</script>
 </head>
 
 <body>
@@ -71,16 +128,21 @@
             <div id="pts"></div>
             <p class="mensaje1">¡MUY BIEN!</p>
             <button id="continuar">CONTINUAR</button>
+
         </div>
         <div id="pantallaCont">
-            <div id="trofeos"><img src="image/won.png" alt="trofeo" width="150px"></div>
+            <div id="trofeos">
+                <img src="image/won.png" alt="trofeo" width="150px"></div>
             <?php
             if(isset($_SESSION['user'])){
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             }
             ?>
             <p class="mensaje">¡COMPLETASTE EL NIVEL!</p>
-            <button class="irNiveles">CONTINUAR</button>
+           <form action="'set_puntos.php'" id="punteador" name="punteador">
+                <input type="hidden" id="puntos_logrados" name="puntos_logrados" value=100>
+            <input type="submit" class="irNiveles" value="CONTINUAR" id="continuar" name="continuar"></input>
+            </form>
         </div>
 
 
@@ -97,6 +159,7 @@
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             }
             ?>
+            <span>Puntos: </span><input disabled=true type='text' id="puntos_juego"></input>
             <div id="niveles">
                 <div><button id="b_inicio" value="inicio"></button>
                     <p>INICIO</p>

@@ -85,7 +85,7 @@
    margin: 15px 5px 0px;
    text-transform: uppercase;
    padding: 5px 10px;
-   background-image: url("globo_dialogo.png");
+   /* background-image: url("globo_dialogo.png"); */
    background-repeat: no-repeat;
    background-size: contain;
    display: flex;
@@ -448,3 +448,4 @@ a:link, a:visited, a:active {
 #salir a{
    color:white;
 }
+
