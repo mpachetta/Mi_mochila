@@ -98,7 +98,7 @@ let locuciones = new Array();
         });
     $("#jugar").click(darOracion);
     $("#continuar").click(()=>{
-        
+        $("#puntos_logrados").val(puntos);
         if(puntos < 100){
 
             limpieza();
@@ -106,6 +106,7 @@ let locuciones = new Array();
             darOracion();
         }else{
             $("#pantallaCont").css("display","flex");
+            
             avance= avance+30;
             $("#rellenoBarra").css("width",avance);
             puntos=0;

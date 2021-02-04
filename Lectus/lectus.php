@@ -131,6 +131,8 @@ function success(){
             <button id="continuar">CONTINUAR</button>
 
         </div>
+        
+        
         <div id="pantallaCont">
             <div id="trofeos">
                 <img src="image/won.png" alt="trofeo" width="150px"></div>
@@ -141,7 +143,7 @@ function success(){
             ?>
             <p class="mensaje">¡COMPLETASTE EL NIVEL!</p>
            <form action="'set_puntos.php'" id="punteador" name="punteador">
-                <input type="hidden" id="puntos_logrados" name="puntos_logrados" value=100>
+                <input type="hidden" id="puntos_logrados" name="puntos_logrados" value="">
             <input type="submit" class="irNiveles" value="CONTINUAR" id="continuar" name="continuar"></input>
             </form>
         </div>

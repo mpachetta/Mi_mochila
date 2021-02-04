@@ -10,38 +10,74 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="miMochilaStyle.css">
     <link rel="stylesheet" href="zonajuegos_style.css">
-    
+<link rel="stylesheet" href="menu_opciones_style.css">
     <script src="Lectus\lectus 1.js"></script>
-  
-<script>
-    $("#usuName").css("display","flex");
 
-</script>
+    <script>
+        $(function(){
 
+            $("#usuName").css("display", "flex");
+        $("#b_opciones").click(()=>{
+            $("#menu_opciones").toggle();
+        })
+
+
+        });
+
+    </script>
+<style>
+
+</style>
 </head>
 
 <body>
 
 
     <div id="contenedor">
-        
+
         <div id="cabecera">
+      
             <div id="sup_cabecera">
-            <div id="usu">
-                <p>Usuario:</p>
-            <?php 
+            
+                <div id="usu">
+                    <p>Usuario:</p>
+                    <?php 
             if(isset($_SESSION['user'])){
             echo $_SESSION['user'];
             }else{
             echo "Anónimo";
             }
             ?>
+                </div>
+
+                <?php
+            echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
+            ?>
+                <div id="config">
+                    <div id='b_opciones'>Opciones</div>
+                   
+                    
+                </div>
+                <div id="menu_opciones">
+            <?php
+            echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
+            echo "<button id='editarImgPerfil'></button>";
+            ?>
+                    
+<div>
+    <?php 
+    echo '<a name="cerrar_sesion" href="comprueba_login/cerrar_sesion.php">Cerrar Sesión</a>';
+    
+    if(isset($_POST['cerrar_sesion'])){ 
+    echo include("comprueba_login\cerrar_sesion.php"); 
+    }
+    ?>
+</div>
+        
+                    </div>
             </div>
-            <div id="config">
-            <a href="comprueba_login/cerrar_sesion.php">Cerrar Sesión</a>
-            </div>
-            </div>
-            <img src="mochila.png" alt="" width="200px">
+            <img src="mochila.png" alt="" width="200px" id='logo'>
+
             <h1>Mi Mochila</h1>
 
         </div>
