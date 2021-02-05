@@ -17,7 +17,7 @@
                     $pts_ant="SELECT * FROM USUARIOSGAME WHERE NOMBRE='$n_usuario'";
                     $resultado_ant=$miconexion->prepare($pts_ant);
           
-                    $resultado_ant->execute(array('barco'));
+                    $resultado_ant->execute(array());
                 while($reg=$resultado_ant->fetch(PDO::FETCH_ASSOC)){
                     $acumulado= $reg['pts_lectus'];
                     
@@ -51,7 +51,7 @@ function pedir_puntos(){
         $pts_ant="SELECT * FROM USUARIOSGAME WHERE NOMBRE='$n_usuario'";
         $resultado_ant=$miconexion->prepare($pts_ant);
 
-        $resultado_ant->execute(array('barco'));
+        $resultado_ant->execute(array());
     while($reg=$resultado_ant->fetch(PDO::FETCH_ASSOC)){
         $acumulado= $reg['pts_lectus'];
         

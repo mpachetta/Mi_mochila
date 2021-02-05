@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    
+
  }
  
  #caja_juegos div{
@@ -63,3 +63,29 @@
  }
 
 
+#caja_menu_opciones, #contenedor{
+    position: relative;
+}
+
+#menu_inf{
+    background-color: coral;
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    bottom: 0;
+    height:60px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+#ranking img{
+width: 50px;
+border:solid 1px white;
+border-radius: 5px;
+padding: 1px;
+margin-top: 3px;
+
+}

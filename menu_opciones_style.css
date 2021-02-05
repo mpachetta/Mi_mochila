@@ -1,38 +1,52 @@
-#sup_cabecera img{
-    width:80px;
- 
-}
-#menu_opciones{
-   position: fixed;
-   right:295px;
-   background-color: rgb(9, 95, 175);
-   width:335px;
-   height: 481px;
-   top:120px;
-   padding: 15px;
-display:none;
+#sup_cabecera img {
+    width: 80px;
 
 }
-#menu_opciones a{
+
+#menu_opciones {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+    background-color: rgb(9, 95, 175);
+    width: 335px;
+    height:430px;
+
+    padding: 15px;
+    display: none;
+
+}
+
+#menu_opciones a {
     background-color: rgb(252, 252, 252);
     padding: 5px 5px;
-     }
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
 
-     #b_opciones{
-         background-color: rgb(161, 161, 161);
-         display: inline;
-         padding: 5px 5px;
-         border:solid 1px;
-         border-radius: 5px;
-         
-     }
+}
 
-     #editarImgPerfil{
-         background-image: url('img/editar.png');
-         background-repeat: no-repeat;
-         background-position: center;
-         height:25px;
-         width:25px;
-     }
+#b_opciones {
+    background-color: rgb(161, 161, 161);
+    display: inline;
+    padding: 5px 5px;
+    border: solid 1px;
+    border-radius: 5px;
 
-  
+}
+
+#editarImgPerfil {
+    background-image: url('img/editar.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+}
+
+#menu_opciones form {
+    width: 300px;
+    height: 200px;
+    background-color: azure;
+}

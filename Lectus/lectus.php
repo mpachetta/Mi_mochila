@@ -20,6 +20,22 @@
    font-size: 18px;
    margin-bottom: 10px;
 }
+#imgPerfil{
+margin-top: 20px;
+   width:70px;
+}
+#n_usuario {
+   font-size: 20px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bolder;
+   color: rgb(48, 23, 23);
+   text-transform: uppercase;
+   
+   
+   padding:0px 10px;
+   border-radius: 5px;
+   
+}
     </style>
 <script>
 
@@ -158,7 +174,9 @@ function success(){
                 </div>
             </div>
             <?php
+
             if(isset($_SESSION['user'])){
+                include ('leer_imgPerfil.php');
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             include ('get_puntos.php');
             
@@ -166,6 +184,8 @@ function success(){
             echo '<input disabled=true type="text" id="puntos_juego" value="';
             echo $puntos=pedir_puntos();
             echo '"></input>';
+            }else{
+                echo "<img src='../img\usuario.png' alt='foto del usuario' id='imgPerfil'>";
             }
             ?>
 

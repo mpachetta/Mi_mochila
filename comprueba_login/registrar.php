@@ -43,7 +43,7 @@ if($n_usuario==""){
                     $miconexion->exec("SET CHARACTER SET utf8");
     
           
-                    $sql="INSERT INTO USUARIOSGAME(NOMBRE,CONTRA) VALUES('$n_usuario','$pass_cifrado')";
+                    $sql="INSERT INTO USUARIOSGAME(NOMBRE,CONTRA,FOTOPERFIL) VALUES('$n_usuario','$pass_cifrado','usuario.png')";
             
     
                     $resultado=$miconexion->prepare($sql);
