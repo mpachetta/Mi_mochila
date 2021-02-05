@@ -183,6 +183,7 @@ function success(){
             <?php
 
             if(isset($_SESSION['user'])){
+                
                 include ('leer_imgPerfil.php');
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             include ('get_puntos.php');

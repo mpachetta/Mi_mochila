@@ -90,3 +90,7 @@ padding: 1px;
 margin-top: 3px;
 
 }
+#menu_inf div{
+    background-color: white;
+    opacity: 0.3;
+}

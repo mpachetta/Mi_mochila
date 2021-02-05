@@ -3,13 +3,27 @@
 
 }
 
-#menu_opciones {
+#menu_opciones{
     position: absolute;
     left: 0px;
     right: 0px;
     top: 0px;
     margin: auto;
     background-color: rgb(9, 95, 175);
+    width: 330px;
+    height:410px;
+
+    padding: 15px;
+    display: none;
+
+}
+#menu_ranking{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+    background-color: #ffffff;
     width: 330px;
     height:410px;
 
@@ -46,7 +60,17 @@
 }
 
 #menu_opciones form {
-    width: 300px;
+    width: 280px;
     height: 200px;
     background-color: azure;
+    overflow:hidden;
+
+}
+
+#subir{
+border-radius: 5px;
+width:100px;
+height:40px;
+display: block;
+margin:auto;
 }
