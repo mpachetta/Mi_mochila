@@ -13,6 +13,7 @@ let locuciones = new Array();
     let puntos = 0;
     let nivel = 0;
     let avance = 0;
+    
     // $("#iniciar").attr("disabled", true);
     
     // $("#usuName input").keyup(() => {
@@ -107,11 +108,14 @@ let locuciones = new Array();
         }else{
             $("#pantallaCont").css("display","flex");
             
-            avance= avance+30;
-            $("#rellenoBarra").css("width",avance);
+            // avance= avance+100;
+            
+            // $("#rellenoBarra").css("width",avance);
             puntos=0;
             nivel=0;
+            avance=0;
             listas=[];
+            $("#rellenoBarra").css("width",avance);
         }});
     $(".irNiveles").click(() => {
         
@@ -244,7 +248,9 @@ let locuciones = new Array();
         if (verificar == false) {
 
             puntos = parseInt(puntos) + 10;
-
+            avance= avance+30;
+            
+            $("#rellenoBarra").css("width",avance);
             
             
             $("#pts").empty().append(puntos);

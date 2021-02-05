@@ -124,8 +124,14 @@ function success(){
         <div id="nuevoIntento">
             <p>Algo no está bien</p>
             <button id="reintentar">VOLVER</button>
+            <button class="b_usuname" id="salir"><a href="lectus.php">Salir del nivel</a></button>
         </div>
-
+        <div id="avance">
+                <div id="usuarioAvance"></div>
+                <div id="barra">
+                    <div id="rellenoBarra"></div>
+                </div>
+            </div>
 
         <div id="pizarra"></div>
         <div id="caja_locucionOracion"><button id="locucionOracion"></button></div>
@@ -145,6 +151,7 @@ function success(){
             <div id="pts"></div>
             <p class="mensaje1">¡MUY BIEN!</p>
             <button id="continuar">CONTINUAR</button>
+            <button class="b_usuname" id="salir"><a href="lectus.php">Salir del nivel</a></button>
 
         </div>
         
@@ -167,12 +174,12 @@ function success(){
 
         <div id="pantallaNiv">
 
-            <div id="avance">
+            <!-- <div id="avance">
                 <div id="usuarioAvance"></div>
                 <div id="barra">
                     <div id="rellenoBarra"></div>
                 </div>
-            </div>
+            </div> -->
             <?php
 
             if(isset($_SESSION['user'])){
@@ -186,6 +193,7 @@ function success(){
             echo '"></input>';
             }else{
                 echo "<img src='../img\usuario.png' alt='foto del usuario' id='imgPerfil'>";
+                echo "<p>Anónimo</p>";
             }
             ?>
 

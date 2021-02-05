@@ -82,20 +82,17 @@
 
   
    border-radius: 5px;
-   margin: 15px 5px 0px;
+   margin: 30px 5px 0px;
    text-transform: uppercase;
-   padding: 5px 10px;
-   /* background-image: url("globo_dialogo.png"); */
-   background-repeat: no-repeat;
-   background-size: contain;
+   padding: 25px 10px;
    display: flex;
    min-height: 180px;
    max-height: 280px;
    flex-wrap: wrap;
-   align-items: flex-start;
+   align-items:flex-start;
   
    overflow: auto;
-   align-content: flex-start;
+   align-content:space-around;
    
 
 }
@@ -409,6 +406,7 @@ footer{
    height:60px;
    top:5px;
    left:8%;
+   margin-bottom: 15px;
    
 }
 
@@ -418,6 +416,7 @@ footer{
    width:300px;
    border-radius:10px;
    overflow: hidden;
+   
    
 }
 #rellenoBarra{

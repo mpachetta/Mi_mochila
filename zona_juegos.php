@@ -17,7 +17,7 @@
         $(function () {
 
             $("#usuName").css("display", "flex");
-            $("#b_opciones").click(() => {
+            $("#b_ajustes").click(() => {
                 $("#menu_opciones").toggle();
             })
             $("#editarImgPerfil").click(() => {
@@ -83,11 +83,7 @@ if(!isset($_SESSION['user'])){
              
              
             ?>
-                <div id="config">
-                    <div id='b_opciones'>Opciones</div>
-
-
-                </div>
+               
                 </div>
                 <div id="caja_menu_opciones">
                 <div id="menu_opciones">
@@ -131,6 +127,9 @@ if(!isset($_SESSION['user'])){
         <div id="menu_inf">
         <div id="ranking">
             <img src='img/ranking.png' alt="">
+        </div>
+        <div id="ajustes">
+            <img src='img/configuraciones.png' alt="" id="b_ajustes">
         </div>
     </div>
 
