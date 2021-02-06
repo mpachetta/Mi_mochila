@@ -19,16 +19,16 @@ session_start();
 
             $("#usuName").css("display", "flex");
             $("#b_ranking").click(() => {
-                $("#b_ranking").css('backgroundColor','white');
-                $("#b_ajustes").css('backgroundColor','rgb(247, 158, 56)');
+                $("#b_ranking").css('backgroundColor', 'white');
+                $("#b_ajustes").css('backgroundColor', 'rgb(247, 158, 56)');
                 $("#menu_ranking").toggle();
-                $("#menu_opciones").css('display','none');
+                $("#menu_opciones").css('display', 'none');
             });
             $("#b_ajustes").click(() => {
-                $("#b_ajustes").css('backgroundColor','white');
-                $("#b_ranking").css('backgroundColor','rgb(247, 158, 56)');
+                $("#b_ajustes").css('backgroundColor', 'white');
+                $("#b_ranking").css('backgroundColor', 'rgb(247, 158, 56)');
                 $("#menu_opciones").toggle();
-                $("#menu_ranking").css('display','none');
+                $("#menu_ranking").css('display', 'none');
             });
 
             $("#editarImgPerfil").click(() => {
@@ -43,29 +43,7 @@ session_start();
         });
     </script>
     <style>
-        #form_imgPerfil {
-            width: 285px;
-            height: 100px;
-            background-color: azure;
-            margin-bottom: 20px;
-            padding: 25px;
-            display: none;
-            border-radius: 25px;
-        }
 
-        #form_imgPerfil label {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        #logo {
-            width: 100px;
-        }
-        #menu_ranking{
-    
-    height: 460px;
-    overflow: auto;
-}
     </style>
 </head>
 
@@ -76,70 +54,44 @@ session_start();
 
         <div id="cabecera">
 
+
             <div id="sup_cabecera">
 
                 <div id="usu">
-                    <p>Usuario:</p>
-                    <?php 
-                    if(isset($_SESSION['user'])){
-                    echo $_SESSION['user'];
-                    }else{
-                    echo "Anónimo";
-                    }
-                    ?>
-                </div>
+                    <div>
+                        <p>Usuario:
+                        </p>
+                        <span class="resaltar">
+                        <?php 
+                        if(isset($_SESSION['user'])){
+                            echo $_SESSION['user'];
+                        }else{
+                            echo "Anónimo";
+                        }
+                        ?>
+                        </span>
+                    </div>
+                    <div>  
+                    <?php
 
-                <?php
-
-                if(!isset($_SESSION['user'])){
-                echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
-                }else{
-                include ('img_perfil\leer_imgPerfil.php');
-                }                
-                    ?>
-
-            </div>
-
-            <div id="caja_menu_opciones">
-                <div id="menu_opciones">
-                        <?php
                         if(!isset($_SESSION['user'])){
                             echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
                         }else{
                             include ('img_perfil\leer_imgPerfil.php');
-                                    
-                        echo "<abbr title='Cambiar la foto de perfil'><button id='editarImgPerfil'></button></abbr>";         
-                        echo '<form action="img_perfil\datosImagen.php" method="post" enctype="multipart/form-data" id="form_imgPerfil">';
-                        echo '<label for="imagen">Elegir la imagen de perfil</label>';
-                        echo '<input type="file" name="imagen" id="imagen"><br><br>';
-                        echo '<input type="submit" value="Subir" id="subir">';
-                        echo '</form>';
-                        } 
-                        ?>
-
-                    <div>
-                        <?php 
-                        echo '<a name="cerrar_sesion" href="comprueba_login/cerrar_sesion.php">Cerrar Sesión</a>';
-    
-                            if(isset($_POST['cerrar_sesion'])){ 
-                            echo include("comprueba_login\cerrar_sesion.php"); 
-                            }
-                            ?>
-
-                    </div>
-                    
-                </div>
-                <div id="caja_menu_ranking">
-                        <div id="menu_ranking">
-                            <?php include ('model/get_ranking.php')?>
-                        </div>
+                        }                
+                    ?>
+                    </div> 
                 </div>
             </div>
-            <img src="mochila.png" alt="" width="100px" id='logo'>
+            <div id="inf_cabecera">
+                <img src="mochila.png" alt="" width="100px" id='logo'>
 
-            <h1>Mi Mochila</h1>
-
+                <h1>Mi Mochila</h1>
+            </div>
         </div>
+
+
+
 
         <div id="caja_juegos">
             <div><a href="lectus/lectus.php"><img src="lectus/image/lectus.png" width="100px" alt="">Lectus</a></div>
@@ -153,6 +105,40 @@ session_start();
                 <img src='img/configuraciones.png' alt="" id="b_ajustes">
             </div>
         </div>
+        <div id="caja_menu">
+            <div id="menu_opciones">
+                <?php
+                        if(!isset($_SESSION['user'])){
+                            echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil' width='100'>";
+                        }else{
+                            include ('img_perfil\leer_imgPerfil.php');
+                                    
+                        echo "<abbr title='Cambiar la foto de perfil'><button id='editarImgPerfil'></button></abbr>";         
+                        echo '<form action="img_perfil\datosImagen.php" method="post" enctype="multipart/form-data" id="form_imgPerfil">';
+                        echo '<label for="imagen">Elegir la imagen de perfil</label>';
+                        echo '<input type="file" name="imagen" id="imagen"><br><br>';
+                        echo '<input type="submit" value="Subir" id="subir">';
+                        echo '</form>';
+                        } 
+                        ?>
+
+                <div>
+                    <?php 
+                        echo '<a name="cerrar_sesion" href="comprueba_login/cerrar_sesion.php">Cerrar Sesión</a>';
+    
+                            if(isset($_POST['cerrar_sesion'])){ 
+                            echo include("comprueba_login\cerrar_sesion.php"); 
+                            }
+                            ?>
+
+                </div>
+
+            </div>
+            <div id="menu_ranking">
+                <?php include ('model/get_ranking.php')?>
+            </div>
+        </div>
+
 
     </div>
     <script src="lectus/lectus 1.js"></script>

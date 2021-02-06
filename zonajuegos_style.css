@@ -1,97 +1,125 @@
-#caja_juegos{
-    display:flex;
+#caja_juegos {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
 
- }
- 
- #caja_juegos div{
-    
+}
+
+#caja_juegos div {
+
     width: 150px;
-    margin:10px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     background-color: rgb(240, 243, 243);
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
-    
- }
- 
- #caja_juegos img{
-    width:100px;
+
+}
+
+#caja_juegos img {
+    width: 100px;
     margin-bottom: 5px;
- }
+}
 
- #caja_juegos a{
-     padding: 5px 0px;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     display: flex;
-     flex-direction: column;
-     justify-content:flex-end;
-     align-items: center;
- }
+#caja_juegos a {
+    padding: 5px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
 
- #sup_cabecera{
-     padding:10px 5px;
-     background-color: aliceblue;
-     display: flex;
-     
-     
- }
-
- 
- #usu, #config{
-     width:180px;
- }
-
- #usu{
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-weight: bolder;
-     text-transform:uppercase;
- }
- #config{
-     text-align: right;
-     
-     
- }
-
- #usu p{
-     display: inline;
-     font-weight: lighter;
-     text-transform: capitalize;
- }
+#sup_cabecera {
+    padding: 10px 5px;
+    background-color: aliceblue;
 
 
-#caja_menu_opciones, #contenedor{
+
+}
+
+#sup_cabecera #imgPerfil {
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 10px;
+    
+}
+
+#sup_cabecera #usu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#usu,
+#config {
+    width: 180px;
+}
+
+#usu div {
+    display: block;
+    margin: 0px 35px;
+    
+    
+}
+
+.resaltar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+
+}
+
+#config {
+    text-align: right;
+
+
+}
+
+#usu div p {
+
+    font-weight: lighter;
+    text-transform: capitalize;
+
+
+}
+
+
+#contenedor {
     position: relative;
 }
 
-#menu_inf{
+#menu_inf {
     background-color: rgb(247, 158, 56);
     position: absolute;
-    left:0;
+    left: 0;
     right: 0;
-    margin:auto;
+    margin: auto;
     bottom: 0;
-    height:60px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0px 5px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
 
 }
 
-#menu_inf img{
-width: 50px;
-border:solid 1px white;
-border-radius: 5px;
-padding: 1px;
-margin-top: 3px;
-
-}
-#menu_inf div{
-    
+#menu_inf img {
+    width: 50px;
+    border: solid 1px white;
     border-radius: 5px;
-    
+    padding: 1px;
+    margin-top: 3px;
+
+}
+
+#menu_inf div {
+
+    border-radius: 5px;
+
 }

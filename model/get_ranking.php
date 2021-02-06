@@ -49,35 +49,37 @@ if(!isset($_SESSION['user'])){
 
                 $miconexion->exec("SET CHARACTER SET utf8");
 
-                $tabla_pts="SELECT * FROM USUARIOSGAME ORDER BY PTS_LECTUS DESC";
+                // $tabla_pts="SELECT * FROM USUARIOSGAME ORDER BY PTS_LECTUS DESC";
+                $tabla_pts="SELECT NOMBRE AS NOMBRE, (PTS_LECTUS + PTS_ANIMAL) AS PTS_TOTAL FROM USUARIOSGAME ORDER BY PTS_TOTAL DESC";
+                
                 $resultado=$miconexion->prepare($tabla_pts);
       
                 $resultado->execute();
 
-                $reg = $resultado->setFetchMode(PDO::FETCH_ASSOC);
-                $n=1;
-                foreach($resultado->fetchAll() as $k=>$v) {
+                $arr=$resultado->fetchAll(PDO::FETCH_ASSOC);
+
                 
+            $n=1;
+
+                foreach($arr as $row) {
+             
                 echo "<tr><td class='w3-blue w3-center'>".$n."</td>";
                 echo "<td class='w3-large'>";
-                if($n_usuario==$v['nombre']){
-                    echo "<span class='mi_nombre'>".$v['nombre']."</span>"; 
+                if($n_usuario==$row['NOMBRE']){
+                    echo "<span class='mi_nombre'>".$row['NOMBRE']."</span>"; 
                 }else{
-                echo $v['nombre'];
+                echo $row['NOMBRE'];
                 }
                 echo "</td>";
                 echo "<td class='w3-right-align'>";
-                echo $v['pts_lectus'];
+                echo $row['PTS_TOTAL'];
                 echo "</td></tr>";
                 $n++;
                 }                
                 echo "</table>";
-            // while($reg=$resultado->fetch(PDO::FETCH_ASSOC)){
-                
-            //     $reg["nombre"];
-            // }
+            
                 $resultado->closeCursor();  
-                
+              
                 
     
             }catch(Exception $e){
