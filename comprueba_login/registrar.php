@@ -1,3 +1,5 @@
+  
+
 <?php
 
 require_once ('conexionesBBDD.php');
@@ -77,10 +79,8 @@ if($n_usuario==""){
         }
 }
 
-//TAREAS:
-//en registro, no permitir que haya usuarios con el mismo nombre
-//usar sesion()
-//en registro, poner dos vecves la contraseña
+
 
 
 ?>
+

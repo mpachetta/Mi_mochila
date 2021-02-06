@@ -1,4 +1,5 @@
-<?php session_start(); 
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 
@@ -18,11 +19,14 @@
 
             $("#usuName").css("display", "flex");
             $("#b_ranking").click(() => {
-
+                $("#b_ranking").css('backgroundColor','white');
+                $("#b_ajustes").css('backgroundColor','rgb(247, 158, 56)');
                 $("#menu_ranking").toggle();
                 $("#menu_opciones").css('display','none');
             });
             $("#b_ajustes").click(() => {
+                $("#b_ajustes").css('backgroundColor','white');
+                $("#b_ranking").css('backgroundColor','rgb(247, 158, 56)');
                 $("#menu_opciones").toggle();
                 $("#menu_ranking").css('display','none');
             });
@@ -77,30 +81,28 @@
                 <div id="usu">
                     <p>Usuario:</p>
                     <?php 
-            if(isset($_SESSION['user'])){
-            echo $_SESSION['user'];
-            }else{
-            echo "Anónimo";
-            }
-            ?>
+                    if(isset($_SESSION['user'])){
+                    echo $_SESSION['user'];
+                    }else{
+                    echo "Anónimo";
+                    }
+                    ?>
                 </div>
 
                 <?php
 
-if(!isset($_SESSION['user'])){
-    echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
-}else{
-    include ('img_perfil\leer_imgPerfil.php');
-}                
-
-             
-             
-            ?>
+                if(!isset($_SESSION['user'])){
+                echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
+                }else{
+                include ('img_perfil\leer_imgPerfil.php');
+                }                
+                    ?>
 
             </div>
+
             <div id="caja_menu_opciones">
                 <div id="menu_opciones">
-                    <?php
+                        <?php
                         if(!isset($_SESSION['user'])){
                             echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
                         }else{
@@ -131,7 +133,7 @@ if(!isset($_SESSION['user'])){
                         <div id="menu_ranking">
                             <?php include ('model/get_ranking.php')?>
                         </div>
-                    </div>
+                </div>
             </div>
             <img src="mochila.png" alt="" width="100px" id='logo'>
 

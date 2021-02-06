@@ -6,7 +6,12 @@
     <title>Registro</title>
 
 <link rel="stylesheet" href="comprueba-login_style.css">
-
+<link rel="stylesheet" href="../miMochilaStyle.css">
+<style>
+#contenedor{
+    border: solid 1px black;
+}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
@@ -33,6 +38,7 @@
 </script>
 </head>
 <body>
+<div id="contendor">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name='login' id='login'>
         <label for="usuario">Introduzca un nombre de usuario:</label>
         <input type="text" name="usuario" id="usuario">
@@ -53,5 +59,6 @@
     }
     
     ?>
+    </div>
 </body>
 </html>

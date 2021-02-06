@@ -68,7 +68,7 @@
 }
 
 #menu_inf{
-    background-color: coral;
+    background-color: rgb(247, 158, 56);
     position: absolute;
     left:0;
     right: 0;
@@ -91,6 +91,7 @@ margin-top: 3px;
 
 }
 #menu_inf div{
-    background-color: white;
-    opacity: 0.3;
+    
+    border-radius: 5px;
+    
 }

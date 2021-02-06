@@ -22,7 +22,7 @@
 }
 #imgPerfil{
 margin-top: 20px;
-   width:70px;
+   width:100px;
 }
 #n_usuario {
    font-size: 20px;
