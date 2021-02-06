@@ -1,0 +1,255 @@
+.titulo {
+    
+    font-size: 54px;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+}
+
+#contenedor {
+    width: 360px;
+    height: 620px;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+    padding-top: 5px;
+}
+
+.pantallaInicial,
+.pantallaFinal {
+    width: 360px;
+    height: 600px;
+    position: absolute;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pantallaInicial button {
+    width: 150px;
+    height: 70px;
+    background-color:orangered;
+    color: white;
+    font-size:1.5em;
+    font-family: cursive;
+}
+
+.pantallaFinal p {
+    font-size: 40px;
+    color: white;
+}
+
+.pantallaFinal img {
+    width: 150px;
+    margin-top: 50px;
+}
+
+#puntaje {
+    width: 290px;
+    /*Tener en cuenta este valor porque incide en el cálculo de la barra de progreso*/
+    background-color: rgb(48, 48, 48);
+    height: 50px;
+    margin: auto;
+    
+    margin-bottom: 10px;
+    border: solid 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#pts {
+
+
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: yellow;
+    
+
+
+}
+
+#estrellas {
+    width: 300px;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    overflow: hidden;
+}
+
+#pista,
+#palabra {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#pista {
+    width: 300px;
+    height:300px;
+    font-size: 35px;
+    
+    font-family: sans-serif;
+}
+
+#palabra{
+    height: 260px;
+}
+
+#pista {
+    width: 300px;
+    height: 140px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+
+
+}
+
+#pista img {
+    height: 140px;
+}
+
+#palabra{
+    margin-top: 3px;
+}
+
+#palabra input {
+display: none;
+}
+
+#palabra label{
+    width: 300px;
+    height: 50px;
+    font-size: 35px;
+    margin: 5px 0px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    padding-top: 10px;
+    border-radius: 6px;
+    border:solid 2px;
+}
+
+#palabra label::first-letter{
+    font-size: 45px;
+    color: rgb(153, 4, 16);
+    font-weight: bolder;
+}
+
+label,
+#pista {
+    box-shadow: rgb(109, 109, 109) 3px 3px 6px;
+    border: none;
+}
+
+#cerrar {
+    visibility: hidden;
+    font-size: 25px;
+    font-family: monospace;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    right: 5px;
+    text-shadow: whitesmoke 2px 2px 4px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#continuar{
+
+    width:360px;
+    height: 300px;
+    position: absolute;
+    top:300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+
+    visibility: hidden;
+}
+#check{
+
+    width:360px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#b_continuar{
+height: 70px;
+color:white;
+font-size: 20px;
+border-radius: 6px;
+border:solid black 3px;
+
+}
+#b_check{
+height: 40px;
+background-color: rgb(10, 153, 248);
+font-size: 25px;
+border-radius: 6px;
+}
+
+.resaltado{
+    color: rgb(122, 21, 3);
+    transform: scale(1.1);
+    font-weight: bolder;
+    
+ 
+}
+
+#correcta{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 40px;
+    background-color: rgb(65, 65, 65,0.4);
+    padding: 10px 20px;
+    border-radius:10px;
+}
+
+#audio{
+margin-top: 25px;
+
+    width:360px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#b_audio{
+    width: 40px;
+    height: 40px;
+    background-image: url("altavoz.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    border:none;
+    border-radius:5px;
+    filter:grayscale();
+}
+#i_audio{
+    display:none;
+}

@@ -18,6 +18,10 @@ h2{
     font-weight: bolder;
     font-size: 1.2em;
 }
+#msg{
+    text-align: center;
+    color: #848F25;
+}
 
     </style>
 </head>
@@ -29,11 +33,11 @@ h2{
 echo '<h2>Posiciones</h2>';
 
 echo "<table id='tabla_ranking' class='w3-table-all w3-card-4'>";
-echo"<tr class='w3-blue'><th></th><th>Nombre</th><th class='w3-right-align'>Puntos</th></tr>";
+echo"<tr class='w3-blue'><th></th><th>Usuario</th><th class='w3-right-align'>Puntos</th></tr>";
 
 if(!isset($_SESSION['user'])){
 
-    echo "<div>No iniciaste sesión como usuario</div>";
+    echo "<div id='msg'>No iniciaste sesión como usuario</div><br><br>";
 
 }else{
 
