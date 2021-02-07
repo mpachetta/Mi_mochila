@@ -1,271 +1,64 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 
 <head>
-    <title>¿Qué animal es?</title>
+    <title>Animalario</title>
     <link rel="stylesheet" href="index_style.css">
-    <link rel="icon" type="image/x-icon" href="pata.png" />
-    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/img/pata.png>
+    <meta charset=" utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="comosellama.css">
     <link rel="stylesheet" href="accesible.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="accesible_1.js"></script>
-    <style>
+    <script src="animalario.js"></script>
 
-    </style>
-
-    <script>
-        $(function () {
-
-            // $("#contenedor").prepend('<h1 class="titulo">¿Qué animal es?</h1>');
-            $("#contenedor").prepend('<div class="pantallaInicial"><h1 class="titulo">¿Qué animal es?</h1><img src="pata.png"><button>EMPEZAR</button></div>');
-            $(".pantallaInicial button").click(niveles);
-            $("#b_continuar").click(continuar);
-
-
-
-            $("#palabra input").change(resaltar);
-
-
-            $("#b_check").click(comprobar);
-
-
- 
-
-            let sound = document.createElement("AUDIO");
-
-            $("#i_audio[type=checkbox]").on("change", function () {
-                
-            
-                let verCheck = $(this).is(':checked');
-
-                if (verCheck == true) {
-                    sound.setAttribute("autoplay", "autoplay");
-                    $("#b_audio").css({
-                        filter: "none",
-                        border: "2px solid green",
-                        
-                    });
-
-                    $("#palabra input").click((e) => {
-
-                        let x = e.target.value;
-                        let locucion = `${x}.mp3`;
-                        sound.setAttribute("src", locucion);
-                    });
-                } else if (verCheck == false) {
-
-                    $("#b_audio").css({
-                        filter: "grayscale()",
-                        border: "none"
-                    });
-                   
-
-                       sound.removeAttribute("autoplay")
-                    
-
-                };
-
-
-
-            });
-
-
-
-        });
-
-
-        let pista = [
-            "<img src='abeja.jpg'/>",
-            "<img src='águila.jpg'/>",
-            "<img src='araña.jpg'/>",
-            "<img src='ardilla.jpg'/>",
-            "<img src='armadillo.jpg'/>",
-            "<img src='avestruz.jpg'/>",
-            "<img src='babosa.jpg'/>",
-            "<img src='ballena.jpg'/>",
-            "<img src='búfalo.jpg'/>",
-            "<img src='buitre.jpg'/>",
-            "<img src='burro.jpg'/>",
-            "<img src='caballo.jpg'/>",
-            "<img src='cabra.jpg'/>",
-            "<img src='camaleón.jpg'/>",
-            "<img src='camello.jpg'/>",
-            "<img src='cangrejo.jpg'/>",
-            "<img src='canguro.jpg'/>",
-            "<img src='caracol.jpg'/>",
-            "<img src='castor.jpg'/>",
-            "<img src='cebra.jpg'/>",
-            "<img src='cerdo.jpg'/>",
-            "<img src='cienpies.jpg'/>",
-            "<img src='ciervo.jpg'/>",
-            "<img src='cigueña.jpg'/>",
-            "<img src='cisne.jpg'/>",
-            "<img src='cocodrilo.jpg'/>",
-            "<img src='comadreja.jpg'/>",
-            "<img src='conejo.jpg'/>",
-            "<img src='cucaracha.jpg'/>",
-            "<img src='delfín.jpg'/>",
-            "<img src='elefante.jpg'/>",
-            "<img src='escarabajo.jpg'/>",
-            "<img src='foca.jpg'/>",
-            "<img src='gallina.jpg'/>",
-            "<img src='gallo.jpg'/>",
-            "<img src='ganso.jpg'/>",
-            "<img src='garza.jpg'/>",
-            "<img src='gato.jpg'/>",
-            "<img src='gorila.jpg'/>",
-            "<img src='halcón.jpg'/>",
-            "<img src='hamster.jpg'/>",
-            "<img src='hipopótamo.jpg'/>",
-            "<img src='hormiga.jpg'/>",
-            "<img src='iguana.jpg'/>",
-            "<img src='jabalí.jpg'/>",
-            "<img src='jirafa.jpg'/>",
-            "<img src='koala.jpg'/>",
-            "<img src='lechuza.jpg'/>",
-            "<img src='león.jpg'/>",
-            "<img src='leopardo.jpg'/>",
-            "<img src='llama.jpg'/>",
-            "<img src='lobo.jpg'/>",
-            "<img src='loro.jpg'/>",
-            "<img src='mapache.jpg'/>",
-            "<img src='mariposa.jpg'/>",
-            "<img src='mono.jpg'/>",
-            "<img src='murciélago.jpg'/>",
-            "<img src='nutria.jpg'/>",
-            "<img src='ñandú.jpg'/>",
-            "<img src='oso.jpg'/>",
-            "<img src='oveja.jpg'/>",
-            "<img src='pantera.jpg'/>",
-            "<img src='pato.jpg'/>",
-            "<img src='pavo.jpg'/>",
-            "<img src='pelícano.jpg'/>",
-            "<img src='perro.jpg'/>",
-            "<img src='picaflor.jpg'/>",
-            "<img src='pulpo.jpg'/>",
-            "<img src='puma.jpg'/>",
-            "<img src='rana.jpg'/>",
-            "<img src='rata.jpg'/>",
-            "<img src='reno.jpg'/>",
-            "<img src='rinoceronte.jpg'/>",
-            "<img src='sapo.jpg'/>",
-            "<img src='serpiente.jpg'/>",
-            "<img src='tiburón.jpg'/>",
-            "<img src='tigre.jpg'/>",
-            "<img src='topo.jpg'/>",
-            "<img src='toro.jpg'/>",
-            "<img src='tortuga.jpg'/>",
-            "<img src='tucán.jpg'/>",
-            "<img src='vaca.jpg'/>",
-            "<img src='zorro.jpg'/>",
-
-
-        ];
-        let palabra = [
-            "abeja",
-            "águila",
-            "araña",
-            "ardilla",
-            "armadillo",
-            "avestruz",
-            "babosa",
-            "ballena",
-            "búfalo",
-            "buitre",
-            "burro",
-            "caballo",
-            "cabra",
-            "camaleón",
-            "camello",
-            "cangrejo",
-            "canguro",
-            "caracol",
-            "castor",
-            "cebra",
-            "cerdo",
-            "cienpies",
-            "ciervo",
-            "cigüeña",
-            "cisne",
-            "cocodrilo",
-            "comadreja",
-            "conejo",
-            "cucaracha",
-            "delfín",
-            "elefante",
-            "escarabajo",
-            "foca",
-            "gallina",
-            "gallo",
-            "ganso",
-            "garza",
-            "gato",
-            "gorila",
-            "halcón",
-            "hamster",
-            "hipopótamo",
-            "hormiga",
-            "iguana",
-            "jabalí",
-            "jirafa",
-            "koala",
-            "lechuza",
-            "león",
-            "leopardo",
-            "llama",
-            "lobo",
-            "loro",
-            "mapache",
-            "mariposa",
-            "mono",
-            "murciélago",
-            "nutria",
-            "ñandú",
-            "oso",
-            "oveja",
-            "pantera",
-            "pato",
-            "pavo",
-            "pelícano",
-            "perro",
-            "picaflor",
-            "pulpo",
-            "puma",
-            "rana",
-            "rata",
-            "reno",
-            "rinoceronte",
-            "sapo",
-            "serpiente",
-            "tiburón",
-            "tigre",
-            "topo",
-            "toro",
-            "tortuga",
-            "tucán",
-            "vaca",
-            "zorro",
-
-        ];
-    </script>
 </head>
 
 <body>
-    <div id="barraNav">
-        <ul>
-            <li><a href="index.html #"><img src="real-estate.png" alt=""></a></li>
-            <li><a href="index.html #language"><img src="lang.png" alt=""></a></li>
-            <li><a href="index.html #math"><img src="math.png" alt=""></a></li>
-            <li><a href="index.html #videos"><img src="youtube.png" alt=""></a></li>
-            <li><a href="index.html #lectura"><img src="book.png" alt=""></a></li>
-        </ul>
-        <input type="button" id="accesibilidad" value="">
-    </div>
+
 
     <div id="contenedor">
+        
+        <div class="pantallaInicial">
+            <h1 class="titulo">ANIMALARIO</h1>
+            <img src="img/pata.png" width="150px">
+            <div id="usuName">
+            <p class="mensaje">¡HOLA!</p>
+            <?php
+            if(isset($_SESSION['user'])){
+            echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+            }
+            ?>
+            </div>
+            <button>EMPEZAR</button>
+        </div>
+        <div id="usuName_juego">
+            <?php
 
+if(isset($_SESSION['user'])){
+    
+    include ('leer_imgPerfil.php');
+echo "<div>";
+echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
+
+
+echo '<span>Puntos acumulados: </span>';
+echo '<input disabled=true type="text" id="puntos_juego" value="';
+
+include ('get_puntos.php');
+echo pedir_puntos('pts_animalario');
+echo '"></input>';
+echo "</div>";
+}else{
+    echo "<img src='../img\usuario.png' alt='foto del usuario' id='imgPerfil'>";
+    echo "<p>Anónimo</p>";
+}
+
+?>
+            </div>
         <div id="puntaje">
+
             <div id="pts"></div>
         </div>
         <div id="estrellas">
@@ -282,12 +75,14 @@
             <input id="opcion2" type="radio" name="i_palabras" readonly="readonly" value="">
 
         </form>
-        <div id="check"><button id="b_check">COMPROBAR</button></div>
+        <div id="check">
+            <button id="b_check">COMPROBAR</button></div>
         <form id="audio"><input type="checkbox" id="i_audio" name="i_audio"></input><label for="i_audio"
                 id="b_audio"></label></form>
         <div id="continuar">
             <div id="correcta"></div>
             <button id="b_continuar">CONTINUAR</button>
+            <button class="b_usuname" id="salir"><a href="../zona_juegos.php">Salir del juego</a></button>
         </div>
 
     </div>
@@ -376,7 +171,7 @@
 
                 puntaje = puntaje + premio;
 
-                
+
                 $("#pts").text("").append(puntaje);
                 $("#continuar").css({
                     visibility: "visible",
@@ -402,7 +197,7 @@
             }
 
             $("#correcta").append(p_dada);
-
+            
         }
 
         continuar = () => {
@@ -412,7 +207,7 @@
             $("#check").css("visibility", "visible");
             $("#correcta").empty();
             niveles();
-
+            
         };
 
         resaltar = (e) => {
