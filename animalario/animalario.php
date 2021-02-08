@@ -19,13 +19,14 @@
 
 
     <div id="contenedor">
-        
+
+
         <div class="pantallaInicial">
             <h1 class="titulo">ANIMALARIO</h1>
             <img src="img/pata.png" width="150px">
             <div id="usuName">
-            <p class="mensaje">¡HOLA!</p>
-            <?php
+                <p class="mensaje">¡HOLA!</p>
+                <?php
             if(isset($_SESSION['user'])){
             echo '<span id="n_usuario">'.$_SESSION['user'].'</span>';
             }
@@ -56,7 +57,7 @@ echo "</div>";
 }
 
 ?>
-            </div>
+        </div>
         <div id="puntaje">
 
             <div id="pts"></div>
@@ -76,14 +77,27 @@ echo "</div>";
 
         </form>
         <div id="check">
+
             <button id="b_check">COMPROBAR</button></div>
         <form id="audio"><input type="checkbox" id="i_audio" name="i_audio"></input><label for="i_audio"
                 id="b_audio"></label></form>
+
+
         <div id="continuar">
             <div id="correcta"></div>
-            <button id="b_continuar">CONTINUAR</button>
-            <button class="b_usuname" id="salir"><a href="../zona_juegos.php">Salir del juego</a></button>
-        </div>
+            <?php
+            echo '<form action="set_puntos.php" method="post" name="punteador" id="punteador">';
+            echo  '<input type="hidden" name="pts_logrados" id="pts_logrados">';
+            echo '<input type="submit" id="b_continuar" value="CONTINUAR"></input>';
+            echo '</form>';
+            if(isset($_POST['punteador'])){
+                include ('set_puntos.php');
+                
+            };
+            ?>
+            <button class="b_usuname" id="salir"><a href="../zona_juegos.php" style="text-decoration:none">Salir del juego</a></button>
+            
+            </div>
 
     </div>
 
@@ -99,14 +113,15 @@ echo "</div>";
         <p>Icons from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
     </footer>
     <script>
-        let puntaje = 0;
+        
         let premio = 10;
-        let castigo = 5;
+        let castigo = 10;
         let opciones = [$("#opcion0"), $("#opcion1"), $("#opcion2")];
         let p_dada = "";
         let elegida = "";
 
         niveles = () => {
+
             $("#contenedor").css({
 
                 top: "0px"
@@ -134,7 +149,9 @@ echo "</div>";
             $("#pista").text("");
             $("#palabra input").val("");
             $(".pantallaInicial").remove();
-            $("#pista").append(pista[i]);
+            
+            $("#pista").append(obtener_pista_img(p_dada));
+            // $("#pista").append(pista[i]);
 
             let id_dada = opciones[y].attr("id");
 
@@ -162,17 +179,22 @@ echo "</div>";
             }
             $("#b_check").attr("disabled", true).css("backgroundColor", "lightgray");
         };
-
+        let estrellas='<img src="img/estrella.png">';
+        let cajastar=document.getElementById('pts');
+        
         comprobar = () => {
             elegida = $("#palabra input[name='i_palabras']:checked").val();
+            puntaje = 0;
+            
 
-
+            
             if (elegida == p_dada) {
 
                 puntaje = puntaje + premio;
 
 
-                $("#pts").text("").append(puntaje);
+                
+                $("#pts").append(estrellas);
                 $("#continuar").css({
                     visibility: "visible",
                     backgroundColor: "rgba(0, 230, 0,0.7)",
@@ -184,8 +206,10 @@ echo "</div>";
 
             } else {
                 puntaje = puntaje - castigo;
-
-                $("#pts").text("").append(puntaje);
+                let cantstar=cajastar.querySelectorAll('img').length;
+                    if(cantstar>0){
+                        cajastar.removeChild(cajastar.lastChild);
+                    }
                 $("#continuar").css({
                     visibility: "visible",
                     backgroundColor: "rgba(230, 0, 0,0.7)",
@@ -197,19 +221,70 @@ echo "</div>";
             }
 
             $("#correcta").append(p_dada);
-            
-        }
 
+
+        }
+        function dar_trofeos(cant){
+            if(cant>9){
+                $("#contenedor").prepend(cajatrofeo);
+                cantstar=0;
+                $("#pts").empty();
+                $("#caja_trofeo button").click(()=>{
+                    $("#caja_trofeo").css('display','none')
+                })
+            }  
+            
+            }
         continuar = () => {
+            let cantstar=cajastar.querySelectorAll('img').length;
+      
+            dar_trofeos(cantstar);
+            $("#pts_logrados").val(puntaje);
+            
             $("#palabra label").remove();
             $("#palabra input").prop("checked", false);
             // $("#contenedor").css("backgroundColor", "royalblue");
             $("#check").css("visibility", "visible");
             $("#correcta").empty();
             niveles();
-            
+
         };
 
+        $("#punteador").on("submit",(e)=>{
+e.preventDefault();
+    var datos_puntaje=$("#punteador").serialize();
+
+    
+    $.ajax({
+        'type':"POST",
+        'url':'set_puntos.php',
+        'data':datos_puntaje,
+        'success':procesarDatos
+
+});
+    
+});
+function procesarDatos (datos_devueltos){
+    
+    <?php
+    if(isset($_SESSION['user'])){
+    echo '$("#puntos_juego").val(datos_devueltos)';
+    }
+?>
+}
+
+function verErrores(){
+
+    var msg="Ooops, ocurrió un error inesperado";
+
+    $("#respuesta").html("<p>"+msg+"</p>");
+
+
+}
+
+function success(){
+    console.log("success")
+}
         resaltar = (e) => {
 
             let x = e.target.id

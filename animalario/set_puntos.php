@@ -1,12 +1,12 @@
 <?php
-   
+session_start();
 
     
-    $n_usuario=$_SESSION["user"];
-//      $n_puntos=$_POST['puntos_logrados'];
-//   $n_puntos=intval($n_puntos);
+$n_usuario=$_SESSION["user"];
+$n_puntos=$_POST['pts_logrados'];
+$n_puntos=intval($n_puntos);
 
-function set_puntos($columna,$n_puntos){
+
     require ('../comprueba_login\conexionesBBDD.php');
   
                try{
@@ -18,9 +18,11 @@ function set_puntos($columna,$n_puntos){
                     $miconexion->exec("SET CHARACTER SET utf8");
 
                    include('get_puntos.php');
-                   $n_puntos=intval($n_puntos);
+                   
+                   
                    $sumatoria=$acumulado+$n_puntos;
-                    $sql="UPDATE usuariosgame SET $columna = $sumatoria WHERE nombre = '$n_usuario'";
+
+                    $sql="UPDATE usuariosgame SET PTS_ANIMALARIO = $sumatoria WHERE nombre = '$n_usuario'";
             
     
                     $resultado=$miconexion->prepare($sql);
@@ -45,7 +47,7 @@ function set_puntos($columna,$n_puntos){
     
                 }
     
-            }
+            
 
         
 
