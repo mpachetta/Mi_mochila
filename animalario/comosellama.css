@@ -289,6 +289,7 @@ margin-top: 15px;
     background-color: royalblue;
     
     z-index: 1;
+    display:none;
 }
 
 #caja_trofeo img,
@@ -302,9 +303,13 @@ margin-top: 15px;
     width:200px;
     margin:50px auto;
 }
-#caja_trofeo button{
-    float: right;
+
+
+#caja_trofeo #ok{
+    display:block;
+    margin:auto;
 }
+
 #caja_trofeo h3,
 #caja_trofeo h4{
     color:white;

@@ -33,7 +33,46 @@
             ?>
             </div>
             <button>EMPEZAR</button>
+            
         </div>
+
+        <div id="caja_trofeo">
+            
+            
+            
+            <form action="" method:"post" name="poner_trofeos" id="poner_trofeos" name="poner_trofeos">;
+            <!-- <input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value="0">; -->
+
+
+            <img src="img/won.png" alt="">;
+            <h3>MUY BUEN TRABAJO</h3>;
+            <h4>SEGUÍ ASÍ</h4>;
+            <input type="submit" id="ok" value="OK"></input>;
+            </form>;
+            
+            
+            <?php
+            
+            // echo '<form action="set_trofeos.php" method:"post" name="poner_trofeos" id="poner_trofeos" name="poner_trofeos">';
+            // echo '<input type="hidden" id="nvo_trofeo" name="nvo_trofeo">';
+
+            
+            // if(isset($_POST['poner_trofeos'])){
+            //     include ('set_trofeos.php');
+            //     set_trofeos();
+                
+            // };
+            // echo '<img src="img/won.png" alt="">';
+            // echo '<h3>MUY BUEN TRABAJO</h3>';
+            // echo '<h4>SEGUÍ ASÍ</h4>';
+            // echo '<input type="submit" id="ok" value="OK"></input>';
+            // echo '</form>';
+            
+            ?>
+
+            
+        </div>
+
         <div id="usuName_juego">
             <?php
 
@@ -101,25 +140,7 @@ echo "</div>";
         </div>
 
     </div>
-    <div id="caja_trofeo">
-        <?php
-            // echo '<form action="set_trofeos.php" method:"post" id="poner_trofeos" name="poner_trofeos">';
-            // echo '<input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value=1>';
-            // echo '<input type="submit" value="X" name="cerrar" id="cerrar"></input>';
-            // echo '</form>';
-            // if(isset($_POST['poner_trofeos'])){
-            //     include ('set_puntos.php');
-                
-            // };
-        ?>
-        <form action="set_trofeos.php" method:"post" id="poner_trofeos" name="poner_trofeos">
-          <input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value=1>
-            <input type="submit" value="Xaasd" name="cerrar" id="cerrar">cerrar</input>
-            </form>
-        <img src="img/won.png" alt="">
-        <h3>MUY BUEN TRABAJO</h3>
-        <h4>SEGUÍ ASÍ</h4>
-    </div>
+
     <footer>
         <hr>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
@@ -243,24 +264,32 @@ echo "</div>";
 
         }
 
-        function dar_trofeos(cant) {
-            if (cant > 2) {
-                $("#contenedor").prepend(cajatrofeo);
-                cantstar = 0;
-
-
+        function dar_trofeos() {
+            
+                $("#caja_trofeo").css('display','block');
+            
                 $("#pts").empty();
-                $("#caja_trofeo button").click(() => {
-                    $("#caja_trofeo").css('display', 'none')
-                })
 
-            }
-
+             $("#ok").click(()=>{
+                $("#caja_trofeo").css('display', 'none');
+             })
+             $.post('set_trofeos.php'); 
+            
+            $("#poner_trofeos").on("submit", (e) => {
+                    e.preventDefault();
+        
+                
+                    
+                });
         }
+
         continuar = () => {
             let cantstar = cajastar.querySelectorAll('img').length;
-
-            dar_trofeos(cantstar);
+            if(cantstar > 2){
+                dar_trofeos();
+                cantstar = 0;
+            }
+            
             $("#pts_logrados").val(puntaje);
 
             $("#palabra label").remove();
@@ -269,7 +298,7 @@ echo "</div>";
             $("#check").css("visibility", "visible");
             $("#correcta").empty();
             niveles();
-
+            
         };
 
         $("#punteador").on("submit", (e) => {
@@ -289,12 +318,11 @@ echo "</div>";
 
         function procesarDatos(datos_devueltos) {
 
-            <
-            ? php
+            <?php
             if (isset($_SESSION['user'])) {
                 echo '$("#puntos_juego").val(datos_devueltos)';
-            } ?
-            >
+            } 
+            ?>
         }
 
         function verErrores() {

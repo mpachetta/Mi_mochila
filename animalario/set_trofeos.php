@@ -1,7 +1,7 @@
 <?php
    session_start();
 
-   function set_trofeos($n_puntos){
+   
     
     require ('../comprueba_login\conexionesBBDD.php');
     
@@ -18,23 +18,17 @@
     
                     $miconexion->exec("SET CHARACTER SET utf8");
 
-                   include('../get_trofeos.php');
+                //    include('../get_trofeos.php');
+                    
 
-                   $sumatoria=$acumulado+$n_puntos;
 
-                    $sql="UPDATE usuariosgame SET trofeos = $sumatoria WHERE nombre = '$n_usuario'";
+                    $sql="UPDATE usuariosgame SET trofeos = trofeos+1 WHERE nombre = '$n_usuario'";
             
     
                     $resultado=$miconexion->prepare($sql);
           
                     $tarea=$resultado->execute();
-                    if($tarea){
-                        
-                        echo $sumatoria;
-                    }else{
-                        echo "problemas";
-                    }
-
+            
                     $resultado->closeCursor();
         
                 }catch(Exception $e){
@@ -48,8 +42,8 @@
                 }
     
     
-            }
-        
+            
+            
 
 
 
