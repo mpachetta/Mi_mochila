@@ -73,7 +73,12 @@ session_start();
                     </div>
                     <div id="vitrina">
                         <img src="img/won.png" alt="">
-                        <p><?php include('get_trofeos.php'); ?></p>
+                        <p><?php 
+                        if(isset($_SESSION['user'])){
+                            include('get_trofeos.php');
+                        }
+                        
+                         ?></p>
                     </div>
                     <div>  
                     <?php

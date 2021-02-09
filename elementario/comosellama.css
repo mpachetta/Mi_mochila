@@ -15,7 +15,6 @@
     background-color: rgb(252, 252, 252);
     position: relative;
     padding-top: 5px;
-    
 }
 
 .pantallaInicial,
@@ -173,7 +172,7 @@ label,
     align-items: center;
     flex-wrap: wrap;
     flex-flow: column;
-
+padding: 5px;
     visibility: hidden;
 }
 #check{
@@ -188,6 +187,7 @@ label,
 }
 
 #b_continuar{
+    margin-top: 60px;
 height: 70px;
 color:white;
 font-size: 20px;
