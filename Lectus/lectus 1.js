@@ -108,6 +108,12 @@ let locuciones = new Array();
         }else{
             $("#pantallaCont").css("display","flex");
             
+            // $("#poner_trofeos").on("submit", (e) => {
+            //     e.preventDefault();
+    
+            
+                
+            // });
             // avance= avance+100;
             
             // $("#rellenoBarra").css("width",avance);

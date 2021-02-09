@@ -37,40 +37,16 @@
         </div>
 
         <div id="caja_trofeo">
-            
-            
+           
             
             <form action="" method:"post" name="poner_trofeos" id="poner_trofeos" name="poner_trofeos">;
-            <!-- <input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value="0">; -->
-
-
-            <img src="img/won.png" alt="">;
-            <h3>MUY BUEN TRABAJO</h3>;
-            <h4>SEGUÍ ASÍ</h4>;
-            <input type="submit" id="ok" value="OK"></input>;
-            </form>;
             
-            
-            <?php
-            
-            // echo '<form action="set_trofeos.php" method:"post" name="poner_trofeos" id="poner_trofeos" name="poner_trofeos">';
-            // echo '<input type="hidden" id="nvo_trofeo" name="nvo_trofeo">';
-
-            
-            // if(isset($_POST['poner_trofeos'])){
-            //     include ('set_trofeos.php');
-            //     set_trofeos();
-                
-            // };
-            // echo '<img src="img/won.png" alt="">';
-            // echo '<h3>MUY BUEN TRABAJO</h3>';
-            // echo '<h4>SEGUÍ ASÍ</h4>';
-            // echo '<input type="submit" id="ok" value="OK"></input>';
-            // echo '</form>';
-            
-            ?>
-
-            
+            <img src="img/won.png" alt="">
+            <h3>MUY BUEN TRABAJO</h3>
+            <h4>SEGUÍ ASÍ</h4>
+            <input type="submit" id="ok" value="OK"></input>
+            </form>
+     
         </div>
 
         <div id="usuName_juego">

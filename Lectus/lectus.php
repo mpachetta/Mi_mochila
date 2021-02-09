@@ -56,6 +56,7 @@ e.preventDefault();
         'success':procesarDatos
 
 });
+$.post('set_trofeos.php');
     
 })
 };
@@ -157,7 +158,9 @@ function success(){
         
         
         <div id="pantallaCont">
+            
             <div id="trofeos">
+                
                 <img src="image/won.png" alt="trofeo" width="150px"></div>
             <?php
             if(isset($_SESSION['user'])){
