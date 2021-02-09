@@ -102,6 +102,8 @@ session_start();
         <div id="caja_juegos">
             <div><a href="lectus/lectus.php"><img src="lectus/image/lectus.png" width="100px" alt="">Lectus</a></div>
             <div><a href="animalario\animalario.php"><img src="animalario/img/pata.png" width="100px" alt="">Animalario</a></div>
+            <div><a href="elementario\elementario.php"><img src="elementario/img/casa_ico.png" width="100px" alt="">Elementario</a></div>
+
         </div>
         <div id="menu_inf">
             <div id="ranking">

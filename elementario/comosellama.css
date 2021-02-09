@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Jomhuria&display=swap');
+.titulo {
+    
+    font-size: 80px;
+    font-family: 'Jomhuria', cursive;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+    letter-spacing:0.1em
+}
+
+#contenedor {
+    width: 360px;
+    height: 620px;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+    padding-top: 5px;
+    
+}
+
+.pantallaInicial,
+.pantallaFinal {
+    width: 360px;
+    height: 600px;
+    position: absolute;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pantallaInicial button {
+    width: 150px;
+    height: 70px;
+    background-color:orangered;
+    color: white;
+    font-size:1.5em;
+    font-family: cursive;
+}
+
+.pantallaFinal p {
+    font-size: 40px;
+    color: white;
+}
+
+.pantallaFinal img {
+    width: 150px;
+    margin-top: 50px;
+}
+
+#puntaje {
+    width: 290px;
+    
+    background-color: rgb(48, 48, 48);
+    height: 30px;
+    margin: auto;
+    
+    margin-bottom: 10px;
+    border: solid 5px;
+    overflow: hidden;
+    
+    
+    
+
+}
+
+#pts img{
+
+width:29px;
+
+
+}
+
+
+
+#pista,
+#palabra {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#pista {
+    width: 300px;
+    height:300px;
+    font-size: 35px;
+    
+    font-family: sans-serif;
+}
+
+#palabra{
+    height: 250px;
+}
+
+#pista {
+    width: 300px;
+    height: 140px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+
+
+}
+
+#pista img {
+    height: 140px;
+}
+
+#palabra{
+    margin-top: 3px;
+}
+
+#palabra input {
+display: none;
+}
+
+#palabra label{
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    margin: 5px 0px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: white;
+    padding-top: 10px;
+    border-radius: 6px;
+    border:solid 2px;
+}
+
+#palabra label::first-letter{
+    font-size: 45px;
+    color: rgb(153, 4, 16);
+    font-weight: bolder;
+}
+
+label,
+#pista {
+    box-shadow: rgb(109, 109, 109) 3px 3px 6px;
+    border: none;
+}
+
+#cerrar {
+    visibility: hidden;
+    font-size: 25px;
+    font-family: monospace;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    right: 5px;
+    text-shadow: whitesmoke 2px 2px 4px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#continuar{
+
+    width:360px;
+    height: 300px;
+    position: absolute;
+    top:320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+
+    visibility: hidden;
+}
+#check{
+
+    width:360px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#b_continuar{
+height: 70px;
+color:white;
+font-size: 20px;
+border-radius: 6px;
+border:solid black 3px;
+
+}
+#b_check{
+height: 30px;
+background-color: rgb(10, 153, 248);
+font-size: 20px;
+border-radius: 6px;
+}
+
+.resaltado{
+    color: rgb(122, 21, 3);
+    transform: scale(1.1);
+    font-weight: bolder;
+    
+ 
+}
+
+#correcta{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 40px;
+    background-color: rgb(65, 65, 65,0.4);
+    padding: 10px 20px;
+    border-radius:10px;
+}
+
+#audio{
+margin-top: 15px;
+
+    width:360px;
+    height: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#b_audio{
+    width: 30px;
+    height: 30px;
+    background-image: url("img/altavoz.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    border:none;
+    border-radius:5px;
+    filter:grayscale();
+}
+#i_audio{
+    display:none;
+}
+
+#usuName p{
+    color:white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#usuName #n_usuario{
+    font-size: 40px;
+    color: cornsilk;
+    padding: 10px;
+}
+
+
+#usuName_juego{
+    padding:10px;
+    background-color: rgb(255, 166, 32);
+    width: 280px;
+    margin: 0px auto 10px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#usuName_juego #n_usuario{
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    
+    display: block;
+    
+}
+
+#puntos_juego{
+    display: block;
+    width:120px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#imgPerfil{
+    width:50px;
+    margin-right: 20px;
+    padding:5px;
+    border:1px solid white;
+    border-radius: 5px;
+}
+#caja_trofeo {
+    width: 360px;
+    height: 600px;
+    position: absolute;
+    background-color: royalblue;
+    
+    z-index: 1;
+    display:none;
+}
+
+#caja_trofeo img,
+#caja_trofeo h3,
+#caja_trofeo h4,
+#caja_trofeo button{
+    display: block;
+}
+
+#caja_trofeo img{
+    width:200px;
+    margin:50px auto;
+}
+
+
+#caja_trofeo #ok{
+    display:block;
+    margin:auto;
+}
+
+#caja_trofeo h3,
+#caja_trofeo h4{
+    color:white;
+    font-size: 1.8em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:25px 0px;
+    text-align: center;
+}
+
+#salir{
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    margin: auto;
+}

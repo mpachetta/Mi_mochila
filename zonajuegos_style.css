@@ -1,14 +1,17 @@
 #caja_juegos {
+    max-height: 260px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    overflow-y: auto;
+    
 
 }
 
 #caja_juegos div {
 
-    width: 150px;
+    width: 135px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -95,7 +98,7 @@
 
 #menu_inf {
     background-color: rgb(247, 158, 56);
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     right: 0;
     margin: auto;
@@ -105,6 +108,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 5px;
+    
 
 }
 
@@ -156,3 +160,4 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: antiquewhite;
     
 }
+
