@@ -62,7 +62,7 @@ session_start();
                         <p>Usuario:
                         </p>
                         <span class="resaltar">
-                        <?php 
+                            <?php 
                         if(isset($_SESSION['user'])){
                             echo $_SESSION['user'];
                         }else{
@@ -71,8 +71,12 @@ session_start();
                         ?>
                         </span>
                     </div>
-                    <div>  
-                    <?php
+                    <div id="vitrina">
+                        <img src="img/won.png" alt="">
+                        <p><?php include('get_trofeos.php'); ?></p>
+                    </div>
+                    <div>
+                        <?php
 
                         if(!isset($_SESSION['user'])){
                             echo "<img src='img/usuario.png' alt='foto del usuario' id='imgPerfil'>";
@@ -80,9 +84,11 @@ session_start();
                             include ('img_perfil\leer_imgPerfil.php');
                         }                
                     ?>
-                    </div> 
+                    </div>
                 </div>
+
             </div>
+
             <div id="inf_cabecera">
                 <img src="mochila.png" alt="" width="100px" id='logo'>
 
