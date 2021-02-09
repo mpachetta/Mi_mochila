@@ -285,7 +285,7 @@ echo "</div>";
 
         continuar = () => {
             let cantstar = cajastar.querySelectorAll('img').length;
-            if(cantstar > 2){
+            if(cantstar > 9){
                 dar_trofeos();
                 cantstar = 0;
             }

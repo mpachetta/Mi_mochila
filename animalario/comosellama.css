@@ -264,7 +264,7 @@ margin-top: 15px;
     width: 280px;
     margin: 0px auto 10px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 #usuName_juego #n_usuario{
@@ -273,6 +273,13 @@ margin-top: 15px;
     
     display: block;
     
+}
+
+#puntos_juego{
+    display: block;
+    width:120px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 #imgPerfil{
