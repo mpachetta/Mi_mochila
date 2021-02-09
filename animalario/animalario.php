@@ -95,12 +95,31 @@ echo "</div>";
                 
             };
             ?>
-            <button class="b_usuname" id="salir"><a href="../zona_juegos.php" style="text-decoration:none">Salir del juego</a></button>
-            
-            </div>
+            <button class="b_usuname" id="salir"><a href="../zona_juegos.php" style="text-decoration:none">Salir del
+                    juego</a></button>
+
+        </div>
 
     </div>
-
+    <div id="caja_trofeo">
+        <?php
+            // echo '<form action="set_trofeos.php" method:"post" id="poner_trofeos" name="poner_trofeos">';
+            // echo '<input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value=1>';
+            // echo '<input type="submit" value="X" name="cerrar" id="cerrar"></input>';
+            // echo '</form>';
+            // if(isset($_POST['poner_trofeos'])){
+            //     include ('set_puntos.php');
+                
+            // };
+        ?>
+        <form action="set_trofeos.php" method:"post" id="poner_trofeos" name="poner_trofeos">
+          <input type="hidden" id="nvo_trofeo" name="nvo_trofeo" value=1>
+            <input type="submit" value="Xaasd" name="cerrar" id="cerrar">cerrar</input>
+            </form>
+        <img src="img/won.png" alt="">
+        <h3>MUY BUEN TRABAJO</h3>
+        <h4>SEGUÍ ASÍ</h4>
+    </div>
     <footer>
         <hr>
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
@@ -113,7 +132,6 @@ echo "</div>";
         <p>Icons from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
     </footer>
     <script>
-        
         let premio = 10;
         let castigo = 10;
         let opciones = [$("#opcion0"), $("#opcion1"), $("#opcion2")];
@@ -149,7 +167,7 @@ echo "</div>";
             $("#pista").text("");
             $("#palabra input").val("");
             $(".pantallaInicial").remove();
-            
+
             $("#pista").append(obtener_pista_img(p_dada));
             // $("#pista").append(pista[i]);
 
@@ -179,21 +197,21 @@ echo "</div>";
             }
             $("#b_check").attr("disabled", true).css("backgroundColor", "lightgray");
         };
-        let estrellas='<img src="img/estrella.png">';
-        let cajastar=document.getElementById('pts');
-        
+        let estrellas = '<img src="img/estrella.png">';
+        let cajastar = document.getElementById('pts');
+
         comprobar = () => {
             elegida = $("#palabra input[name='i_palabras']:checked").val();
             puntaje = 0;
-            
 
-            
+
+
             if (elegida == p_dada) {
 
                 puntaje = puntaje + premio;
 
 
-                
+
                 $("#pts").append(estrellas);
                 $("#continuar").css({
                     visibility: "visible",
@@ -206,10 +224,10 @@ echo "</div>";
 
             } else {
                 puntaje = puntaje - castigo;
-                let cantstar=cajastar.querySelectorAll('img').length;
-                    if(cantstar>0){
-                        cajastar.removeChild(cajastar.lastChild);
-                    }
+                let cantstar = cajastar.querySelectorAll('img').length;
+                if (cantstar > 0) {
+                    cajastar.removeChild(cajastar.lastChild);
+                }
                 $("#continuar").css({
                     visibility: "visible",
                     backgroundColor: "rgba(230, 0, 0,0.7)",
@@ -224,48 +242,27 @@ echo "</div>";
 
 
         }
-        function dar_trofeos(cant){
-            if(cant>9){
+
+        function dar_trofeos(cant) {
+            if (cant > 2) {
                 $("#contenedor").prepend(cajatrofeo);
-                cantstar=0;
-                
-//agrego un trofeo a la BBDD
-let trofeo_ganado=1;    
-    $.ajax({
-        'type':"POST",
-        'url':'set_puntos.php',
-        'data':trofeo_ganado,
-        'success':procesarDatos
-
-});
-    
-
-function procesarDatos (datos_devueltos){
-    
- console.log(datos_devueltos);
-}
-
-function verErrores(){
-
-    var msg="Ooops, ocurrió un error inesperado";
-
-    $("#respuesta").html("<p>"+msg+"</p>");
+                cantstar = 0;
 
 
-}
                 $("#pts").empty();
-                $("#caja_trofeo button").click(()=>{
-                    $("#caja_trofeo").css('display','none')
+                $("#caja_trofeo button").click(() => {
+                    $("#caja_trofeo").css('display', 'none')
                 })
-            }  
-            
+
             }
+
+        }
         continuar = () => {
-            let cantstar=cajastar.querySelectorAll('img').length;
-      
+            let cantstar = cajastar.querySelectorAll('img').length;
+
             dar_trofeos(cantstar);
             $("#pts_logrados").val(puntaje);
-            
+
             $("#palabra label").remove();
             $("#palabra input").prop("checked", false);
             // $("#contenedor").css("backgroundColor", "royalblue");
@@ -275,37 +272,39 @@ function verErrores(){
 
         };
 
-        $("#punteador").on("submit",(e)=>{
-e.preventDefault();
-    var datos_puntaje=$("#punteador").serialize();
-
-    
-    $.ajax({
-        'type':"POST",
-        'url':'set_puntos.php',
-        'data':datos_puntaje,
-        'success':procesarDatos
-
-});
-    
-});
-function procesarDatos (datos_devueltos){
-    
-    <?php
-    if(isset($_SESSION['user'])){
-    echo '$("#puntos_juego").val(datos_devueltos)';
-    }
-?>
-}
-
-function verErrores(){
-
-    var msg="Ooops, ocurrió un error inesperado";
-
-    $("#respuesta").html("<p>"+msg+"</p>");
+        $("#punteador").on("submit", (e) => {
+            e.preventDefault();
+            var datos_puntaje = $("#punteador").serialize();
 
 
-}
+            $.ajax({
+                'type': "POST",
+                'url': 'set_puntos.php',
+                'data': datos_puntaje,
+                'success': procesarDatos
+
+            });
+
+        });
+
+        function procesarDatos(datos_devueltos) {
+
+            <
+            ? php
+            if (isset($_SESSION['user'])) {
+                echo '$("#puntos_juego").val(datos_devueltos)';
+            } ?
+            >
+        }
+
+        function verErrores() {
+
+            var msg = "Ooops, ocurrió un error inesperado";
+
+            $("#respuesta").html("<p>" + msg + "</p>");
+
+
+        }
 
 
         resaltar = (e) => {

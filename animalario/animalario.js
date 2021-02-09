@@ -56,12 +56,7 @@ $(function () {
 
 
 });
-let cajatrofeo=`<div id="caja_trofeo">
-<button>X</button>
-<img src="img/won.png" alt="">
-<h3>MUY BUEN TRABAJO</h3>
-<h4>SEGUÍ ASÍ</h4>
-</div>`
+
 
 
 let palabra = [

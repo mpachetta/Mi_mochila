@@ -1,9 +1,12 @@
 <?php
    session_start();
 
+   function set_trofeos($n_puntos){
+    
     require ('../comprueba_login\conexionesBBDD.php');
+    
     $n_usuario=$_SESSION["user"];
-$n_puntos=$_POST['trofeo_ganado'];
+
 
 
   
@@ -16,7 +19,9 @@ $n_puntos=$_POST['trofeo_ganado'];
                     $miconexion->exec("SET CHARACTER SET utf8");
 
                    include('../get_trofeos.php');
+
                    $sumatoria=$acumulado+$n_puntos;
+
                     $sql="UPDATE usuariosgame SET trofeos = $sumatoria WHERE nombre = '$n_usuario'";
             
     
@@ -43,7 +48,7 @@ $n_puntos=$_POST['trofeo_ganado'];
                 }
     
     
-
+            }
         
 
 
