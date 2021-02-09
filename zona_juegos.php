@@ -71,6 +71,10 @@ session_start();
                         ?>
                         </span>
                     </div>
+                    <div id="vitrina">
+                        <img src="img/won.png" alt="">
+                        <p><?php include('get_trofeos.php'); ?></p>
+                    </div>
                     <div>  
                     <?php
 
@@ -82,7 +86,9 @@ session_start();
                     ?>
                     </div> 
                 </div>
+                
             </div>
+            
             <div id="inf_cabecera">
                 <img src="mochila.png" alt="" width="100px" id='logo'>
 

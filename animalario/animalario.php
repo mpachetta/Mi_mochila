@@ -228,6 +228,31 @@ echo "</div>";
             if(cant>9){
                 $("#contenedor").prepend(cajatrofeo);
                 cantstar=0;
+                
+//agrego un trofeo a la BBDD
+let trofeo_ganado=1;    
+    $.ajax({
+        'type':"POST",
+        'url':'set_puntos.php',
+        'data':trofeo_ganado,
+        'success':procesarDatos
+
+});
+    
+
+function procesarDatos (datos_devueltos){
+    
+ console.log(datos_devueltos);
+}
+
+function verErrores(){
+
+    var msg="Ooops, ocurrió un error inesperado";
+
+    $("#respuesta").html("<p>"+msg+"</p>");
+
+
+}
                 $("#pts").empty();
                 $("#caja_trofeo button").click(()=>{
                     $("#caja_trofeo").css('display','none')
@@ -282,9 +307,7 @@ function verErrores(){
 
 }
 
-function success(){
-    console.log("success")
-}
+
         resaltar = (e) => {
 
             let x = e.target.id
