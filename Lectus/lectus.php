@@ -56,7 +56,7 @@ e.preventDefault();
         'success':procesarDatos
 
 });
-$.post('set_trofeos.php');
+$.post('../model/set_trofeos.php');
     
 })
 };

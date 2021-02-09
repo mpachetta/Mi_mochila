@@ -249,7 +249,7 @@ echo "</div>";
              $("#ok").click(()=>{
                 $("#caja_trofeo").css('display', 'none');
              })
-             $.post('set_trofeos.php'); 
+             $.post('../model/set_trofeos.php'); 
             
             $("#poner_trofeos").on("submit", (e) => {
                     e.preventDefault();

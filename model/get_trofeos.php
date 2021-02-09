@@ -1,11 +1,7 @@
 <?php
-   session_start();
 
-   
-    
-    require ('../comprueba_login\conexionesBBDD.php');
-    
-    $n_usuario=$_SESSION["user"];
+    require ('comprueba_login\conexionesBBDD.php');
+    $n_usuario=$_SESSION['user'];
 
 
 
@@ -18,18 +14,19 @@
     
                     $miconexion->exec("SET CHARACTER SET utf8");
 
-                //    include('../get_trofeos.php');
-                    
-
-
-                    $sql="UPDATE usuariosgame SET trofeos = trofeos+1 WHERE nombre = '$n_usuario'";
-            
-    
+                    $sql="SELECT * FROM USUARIOSGAME WHERE NOMBRE='$n_usuario'";
                     $resultado=$miconexion->prepare($sql);
           
-                    $tarea=$resultado->execute();
-            
-                    $resultado->closeCursor();
+                    $resultado->execute(array());
+                        while($reg=$resultado->fetch(PDO::FETCH_ASSOC)){
+                        $acumulado= $reg['trofeos'];
+                    echo $acumulado;
+                    }
+                    $resultado->closeCursor(); 
+                
+                     
+                    
+                    
         
                 }catch(Exception $e){
     
@@ -42,9 +39,4 @@
                 }
     
     
-            
-            
-
-
-
 ?>

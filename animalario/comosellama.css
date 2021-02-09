@@ -258,6 +258,8 @@ margin-top: 15px;
     color: cornsilk;
     padding: 10px;
 }
+
+
 #usuName_juego{
     padding:10px;
     background-color: rgb(255, 166, 32);
@@ -330,4 +332,5 @@ margin-top: 15px;
     font-size: 16px;
     color:white;
     text-decoration: none;
+    margin: auto;
 }
