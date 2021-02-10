@@ -7,10 +7,10 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom:55px;
+    bottom:60px;
     margin: auto;
     background-color: rgb(9, 95, 175);
-    width: 360px;
+    width: 358px;
     height:455px;
 
     padding: 5px;
@@ -29,15 +29,29 @@
     bottom: 55px;
     margin: auto;
     background-color: white;
-    width: 360px;
-    height:410px;
+    width: 358px;
+    height:390px;
 
     padding: 5px;
     display: none;
 
 }
 
-#menu_opciones a {
+#menu_favoritos{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 55px;
+    margin: auto;
+    background-color: rgb(252, 10, 10);
+    width: 358px;
+    height:455px;
+
+    padding: 5px;
+    display: none;
+}
+
+#menu_opciones #cerrar_sesion {
     background-color: rgb(252, 252, 252);
     padding: 5px 5px;
     display: block;
@@ -106,4 +120,23 @@ margin:auto;
     height: 460px;
     overflow: auto;
 }
+
+footer{
+   
+    text-align: center;
+    font-size:0.7em;
+    margin:50px auto 0px;
+    padding: 5px 5px;
+    height:110px;
+    background-color: rgb(53, 121, 185);
+    box-shadow: lightblue 2px 2px;
+    
+ }
+
+ footer a,
+ footer p{
+     display: inline-block;
+     margin:0px;
+     padding:0px;
+ }
 

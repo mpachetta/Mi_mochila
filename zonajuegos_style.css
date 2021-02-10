@@ -97,7 +97,7 @@
 }
 
 #menu_inf {
-    background-color: rgb(247, 158, 56);
+    background-color: rgb(235, 235, 235);
     /* position: absolute; */
     left: 0;
     right: 0;
@@ -108,7 +108,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 5px;
-    
+    z-index: 1;
 
 }
 
@@ -124,8 +124,18 @@
 #menu_inf div {
 
     border-radius: 5px;
+    box-shadow: 0.5px 0.5px 5px;
 
 }
+
+
+#menu_inf div:active{
+    transform: scale(0.9);
+    background-color: rgb(221, 221, 221);
+}
+
+
+
 #vitrina{
     display: block;
     width:80px;

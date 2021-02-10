@@ -18,17 +18,21 @@ session_start();
         $(function () {
 
             $("#usuName").css("display", "flex");
+
             $("#b_ranking").click(() => {
-                $("#b_ranking").css('backgroundColor', 'white');
-                $("#b_ajustes").css('backgroundColor', 'rgb(247, 158, 56)');
                 $("#menu_ranking").toggle();
                 $("#menu_opciones").css('display', 'none');
+                $("#menu_favoritos").css('display', 'none');
+            });
+            $("#b_favoritos").click(() => {
+                $("#menu_favoritos").toggle();
+                $("#menu_opciones").css('display', 'none');
+                $("#menu_ranking").css('display', 'none');
             });
             $("#b_ajustes").click(() => {
-                $("#b_ajustes").css('backgroundColor', 'white');
-                $("#b_ranking").css('backgroundColor', 'rgb(247, 158, 56)');
                 $("#menu_opciones").toggle();
                 $("#menu_ranking").css('display', 'none');
+                $("#menu_favoritos").css('display', 'none');
             });
 
             $("#editarImgPerfil").click(() => {
@@ -112,10 +116,13 @@ session_start();
         </div>
         <div id="menu_inf">
             <div id="ranking">
-                <img src='img/ranking.png' alt="" id="b_ranking">
+                <img src='img/ranking.png' alt="botón ranking" id="b_ranking">
+            </div>
+            <div id="favoritos">
+                <img src='img/favorito.png' alt="boton favoritos" id="b_favoritos">
             </div>
             <div id="ajustes">
-                <img src='img/configuraciones.png' alt="" id="b_ajustes">
+                <img src='img/configuraciones.png' alt="boton ajustes" id="b_ajustes">
             </div>
         </div>
         <div id="caja_menu">
@@ -137,7 +144,7 @@ session_start();
 
                 <div>
                     <?php 
-                        echo '<a name="cerrar_sesion" href="comprueba_login/cerrar_sesion.php">Cerrar Sesión</a>';
+                        echo '<a name="cerrar_sesion" href="comprueba_login/cerrar_sesion.php" id="cerrar_sesion">Cerrar Sesión</a>';
     
                             if(isset($_POST['cerrar_sesion'])){ 
                             echo include("comprueba_login\cerrar_sesion.php"); 
@@ -145,7 +152,20 @@ session_start();
                             ?>
 
                 </div>
-
+                <footer>
+                
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+                <br />
+                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">"Mi mochila"</span>
+                 por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Martín Pachetta</span> se distribuye bajo una 
+                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional.</a>
+                <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from 
+                <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+                </footer>
+            </div>
+            <div id="menu_favoritos">
+                Mis favoritos
             </div>
             <div id="menu_ranking">
                 <?php include ('model/get_ranking.php')?>

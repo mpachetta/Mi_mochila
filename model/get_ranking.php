@@ -23,6 +23,24 @@ h2{
     color: #848F25;
 }
 
+tr:nth-child(2) td:nth-child(2){
+            background-image: url('img/medalla1.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+tr:nth-child(3) td:nth-child(2){
+    background-image: url('img/medalla2.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+tr:nth-child(4) td:nth-child(2){
+    background-image: url('img/medalla3.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
     </style>
 </head>
 <body>

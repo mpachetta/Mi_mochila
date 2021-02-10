@@ -1,7 +1,7 @@
 <?php
    session_start();
 
-   
+if(isset($_SESSION['user'])){   
     
     require ('../comprueba_login\conexionesBBDD.php');
     
@@ -45,6 +45,6 @@
             
             
 
-
+            }
 
 ?>
