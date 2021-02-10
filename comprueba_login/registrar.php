@@ -59,7 +59,7 @@ if($n_usuario==""){
                         }else{
                             echo("Felicitaciones $n_usuario. Registro exitoso.<br><br>");
             
-                            echo "<p><a href='../index.php'>Continuar</a></p>";
+                            echo "<button><a href='../index.php'>Continuar</a></button>";
                         }
     
                     $resultado->closeCursor();

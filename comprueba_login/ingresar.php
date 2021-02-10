@@ -5,7 +5,7 @@
 
 
 require ('conexionesBBDD.php');
-$usu_entrar=$_POST['usuario'];
+$usu_entrar=($_POST['usuario']);
 $contra_entrar=$_POST['contra'];
 try{
 
@@ -16,10 +16,12 @@ try{
     $miconexion->exec("SET CHARACTER SET utf8");
 
       
-        $sql="SELECT * FROM USUARIOSGAME WHERE NOMBRE='$usu_entrar'";
+    
+        $sql="SELECT * FROM USUARIOSGAME WHERE NOMBRE=:n_usu";
         
 
         $resultado=$miconexion->prepare($sql);
+        $resultado->bindParam(':n_usu',$usu_entrar);
         $resultado->execute();
 
         //Verifica si el usuario existe

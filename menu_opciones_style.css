@@ -97,13 +97,14 @@ display: block;
 margin:auto;
 }
 #form_imgPerfil {
-    width: 285px;
-    height: 100px;
+    width: 350px;
+    height: 160px;
     background-color: azure;
     margin-bottom: 20px;
     padding: 25px;
     display: none;
     border-radius: 25px;
+    position: absolute;
 }
 
 #form_imgPerfil label {
