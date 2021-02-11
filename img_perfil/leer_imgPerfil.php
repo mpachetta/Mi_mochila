@@ -3,7 +3,7 @@
 
 $usuario=$_SESSION['user'];
 
-require_once ('comprueba_login/conexionesBBDD.php');
+require_once ('conexionesBBDD.php');
 
 try {
     $miconexion=new PDO('mysql:host='.$base_host.';dbname='.$base_name.'',''.$base_usu.'',''.$base_contr.'');

@@ -69,10 +69,14 @@
 }
 
 .resaltar {
+    display: block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: uppercase;
+    width: 110px;
+    max-width:115px;
+    
 
 
 }
@@ -97,11 +101,11 @@
 }
 
 #menu_inf {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(229, 243, 247);
     /* position: absolute; */
     left: 0;
     right: 0;
-    margin: auto;
+    margin:  auto ;
     bottom: 0;
     height: 60px;
     display: flex;
