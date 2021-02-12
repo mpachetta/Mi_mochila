@@ -3,19 +3,26 @@
 
 }
 
-#menu_opciones{
+#menu_opciones,
+#menu_ranking,
+#menu_favoritos{
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom:70px;
+    bottom:58px;
     margin: auto;
-    background-color: rgb(9, 95, 175);
+    
     width: 358px;
-    height:455px;
+    height:440px;
+    max-height:445px;
 
     padding: 5px;
     display: none;
 
+}
+
+#menu_opciones{
+    background-color: rgb(48, 112, 172);
 }
 #menu_opciones #imgPerfil{
     width:100px;
@@ -23,32 +30,15 @@
     margin: auto;
 }
 #menu_ranking{
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 70px;
-    margin: auto;
-    background-color: white;
-    width: 358px;
-    height:390px;
 
-    padding: 5px;
-    display: none;
+    background-color: rgb(223, 214, 97);
 
 }
 
 #menu_favoritos{
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 70px;
-    margin: auto;
-    background-color: rgb(252, 10, 10);
-    width: 358px;
-    height:455px;
+   
+    background-color: rgb(230, 87, 87);
 
-    padding: 5px;
-    display: none;
 }
 
 #menu_opciones #cerrar_sesion {
@@ -126,11 +116,10 @@ footer{
    
     text-align: center;
     font-size:0.7em;
-    margin:50px auto 0px;
+    margin:30px auto 0px;
     padding: 5px 5px;
     height:110px;
-    background-color: rgb(53, 121, 185);
-    box-shadow: lightblue 2px 2px;
+
     
  }
 
