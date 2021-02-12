@@ -72,7 +72,7 @@ if(!isset($_SESSION['user'])){
                 $miconexion->exec("SET CHARACTER SET utf8");
 
                 // $tabla_pts="SELECT * FROM USUARIOSGAME ORDER BY PTS_LECTUS DESC";
-                $tabla_pts="SELECT NOMBRE AS NOMBRE, (PTS_LECTUS + PTS_ANIMALARIO) AS PTS_TOTAL FROM USUARIOSGAME ORDER BY PTS_TOTAL DESC";
+                $tabla_pts="SELECT NOMBRE AS NOMBRE, (PTS_LECTUS + PTS_ANIMALARIO + PTS_ELEMENTARIO + PTS_MUSICAL) AS PTS_TOTAL FROM USUARIOSGAME ORDER BY PTS_TOTAL DESC";
                 
                 $resultado=$miconexion->prepare($tabla_pts);
       

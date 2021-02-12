@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso</title>
 
-    <link rel="stylesheet" href="../comprueba_login/comprueba-login_style.css">
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="lectus 1.js"></script>
+    
     <script>
         $(function () {
 

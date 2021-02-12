@@ -116,6 +116,8 @@
 
 }
 
+
+
 #menu_inf img {
     width: 50px;
     border: solid 1px white;
@@ -130,6 +132,10 @@
     border-radius: 5px;
     box-shadow: 0.5px 0.5px 5px;
 
+}
+
+#menu_inf div:hover{
+    background-color: white;
 }
 
 
