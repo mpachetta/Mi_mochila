@@ -2,7 +2,8 @@
     width:360px;
     height:640px;
     background-color: rgb(208, 224, 224);
-    padding: 20px 0px;
+    padding: 10px 0px;
+    margin: auto;
 }
 
 .cont_pantallas{
@@ -18,14 +19,29 @@
 }
 .cont_pantallas_child{
     width:360px;
-    height:640px;
+    height:400px;
     background-color: rgb(208, 224, 224);
-    padding: 20px 0px;
+    padding: 25px 0px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    /* flex-direction: column;
     justify-content: center;
+    align-items: center; */
+    /* overflow: auto; */
+}
+
+.cont_pantallas_child div{
+width:130px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    overflow: auto;
+    
+}
+.cont_pantallas_child .select_game{
+    width:80px;
 }
 
 .cont_pantallas h1{
@@ -34,8 +50,11 @@
     text-align: center;
 }
 .cont_pantallas h2{
+    display: block;
+    width:100%;
 text-align: center;
 margin-bottom:15px;
+background-color: rgb(178, 201, 201);;
 }
 .cont_pantallas h3{
 text-align: center;
@@ -63,10 +82,11 @@ margin-bottom:2em;
 }
 .cont_pantallas .boton_select{
 
-    width:128px;
+    width:100px;
     height:40px;
     margin-top:10px;
     margin-bottom: 10px;
+    font-size: 12px;
 
 }
 
@@ -127,4 +147,28 @@ margin-bottom:2em;
 #navegacion button{
     width:160px;
 
+}
+
+#aviso img{
+    width:50px;
+}
+
+#b_salir{
+    font-size: 12px;
+    background-color: lightcoral;
+    width:100px;
+    height:30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#b_salir:active{
+    transform: scale(0.9);
+}
+
+footer{
+    width:330px;
+    margin:auto;
+    font-size:0.7em;
+    text-align: center;
 }

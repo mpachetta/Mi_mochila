@@ -30,6 +30,7 @@ $(function () {
     pantalla_selectGame = () => {
         $("#pantallas").empty().append(cont_pantalla_selectGame)
         $(".cont_pantallas").addClass("w3-animate-opacity")
+        $("#cabecera").load('cont_cabecera.php');
         $("footer").empty()
 
 
@@ -65,11 +66,29 @@ $(function () {
         pantalla_premios = (x) => {
             $("#pantallas").empty().append(cont_pantalla_premios)
             $(".cont_pantallas").addClass("w3-animate-opacity")
-            $("#usuName_alt").val(x);
+            $("#pts_logrados").val(puntaje);
+            $("#usuName_alt").load('cont_nombrar_usuario.php');
             $("#puntaje").append(puntaje, " puntos")
-    
+            
+            if(puntaje==100){
+                $("#aviso").append(trofeo);
+                $.post('../model/set_trofeos.php');
+            }
 
-            $("#salir_premios").click(() => {
+        $("#punteador").on("submit",(e)=>{
+                e.preventDefault();
+                
+                var datos_puntaje=$("#punteador").serialize();
+            
+                
+                $.ajax({
+                    'type':"POST",
+                    'url':'set_puntos.php',
+                    'data':datos_puntaje
+                });
+               
+               
+                puntaje=0;
                 pantalla_selectGame();
             })
 
@@ -178,7 +197,7 @@ $(function () {
             $("#display").append(lista[y])
 
             actual_lista.push(lista[y])
-            console.log(lista)
+            
             $("#botonera input").click(relacionar)
 
            

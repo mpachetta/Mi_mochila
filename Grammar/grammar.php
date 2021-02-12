@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
   <head>
-    <title>Articulos</title>
+    <title>Grammar</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
