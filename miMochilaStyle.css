@@ -33,7 +33,8 @@
     margin-top: 1px;
     font-family: 'Sigmar One', cursive;
     font-size: 45px;
-    
+    color:rgb(250, 246, 6);
+    text-shadow: 2px 2px 3px rgb(83, 83, 83);
 
 }
 
