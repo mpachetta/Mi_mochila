@@ -1,5 +1,6 @@
 #caja_juegos {
-    max-height: 260px;
+    min-height: 260px;
+    max-height: 325px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -102,7 +103,7 @@
 
 #menu_inf {
     background-color: rgb(229, 243, 247);
-    /* position: absolute; */
+    position: absolute; 
     left: 0;
     right: 0;
     margin:  auto ;
@@ -181,3 +182,6 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
+#titulo{
+    display:none;
+}

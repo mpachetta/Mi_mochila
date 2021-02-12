@@ -1,0 +1,130 @@
+#pantallas{
+    width:360px;
+    height:640px;
+    background-color: rgb(208, 224, 224);
+    padding: 20px 0px;
+}
+
+.cont_pantallas{
+    width:360px;
+    height:640px;
+    background-color: rgb(208, 224, 224);
+    padding: 20px 0px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cont_pantallas_child{
+    width:360px;
+    height:640px;
+    background-color: rgb(208, 224, 224);
+    padding: 20px 0px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.cont_pantallas h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4em;
+    text-align: center;
+}
+.cont_pantallas h2{
+text-align: center;
+margin-bottom:15px;
+}
+.cont_pantallas h3{
+text-align: center;
+margin-bottom:2em;
+}
+
+.cont_pantallas label{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.cont_pantallas #usuName{
+    margin:20px 25px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cont_pantallas .boton_navegar{
+
+    width:180px;
+    height:60px;
+    
+
+}
+.cont_pantallas .boton_select{
+
+    width:128px;
+    height:40px;
+    margin-top:10px;
+    margin-bottom: 10px;
+
+}
+
+.cont_pantallas #usuName_alt{
+
+    font-size: 1.8em;
+    border: none;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+    background-color: rgb(208, 224, 224);
+    text-transform: uppercase;
+}
+
+.cont_pantallas #cajaUsu{
+
+    text-transform: uppercase;
+}
+#puntaje{
+    height: 50px;
+    width:340px;
+    background-color: rgb(79, 157, 226);
+    margin:0px 10px 20px 10px;
+    font-size: 30px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#display input{
+
+    width:280px;
+    height:280px;
+}
+#botonera{
+    display: flex;
+    margin:20px 10px;
+    flex-wrap: wrap;
+}
+
+#botonera input{
+
+    width:160px;
+    height:80px;
+    margin:5px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+
+}
+#navegacion{
+    width:160px;
+    height:80px;
+    margin:20px 0px;
+    
+}
+
+#navegacion button{
+    width:160px;
+
+}

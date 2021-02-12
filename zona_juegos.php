@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 
 <head>
-    <title>Lectus</title>
+    <title>Zona de juegos</title>
     <link rel="icon" type="image/x-icon" href="image/fav_lectus.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,6 +43,10 @@ session_start();
             $("#form_imgPerfil").submit((e) => {
 
                 $("#form_imgPerfil").css('display', 'none');
+            })
+
+            $("#inf_cabecera").hover(()=>{
+                $("#titulo").toggle();
             })
         });
     </script>
@@ -101,7 +105,7 @@ session_start();
             <div id="inf_cabecera">
                 <img src="mochila.png" alt="" width="100px" id='logo'>
 
-                <h1>Mi Mochila</h1>
+                <h1 id="titulo">Mi Mochila</h1>
             </div>
         </div>
 
@@ -113,6 +117,7 @@ session_start();
             <div><a href="animalario\animalario.php"><img src="animalario/img/pata.png" width="100px" alt="">Animalario</a></div>
             <div><a href="elementario\elementario.php"><img src="elementario/img/casa_ico.png" width="100px" alt="">Elementario</a></div>
             <div><a href="musical\musical.php"><img src="Musical\img\logo_headphones.png" width="100px" alt="">Musical</a></div>
+            <div><a href="grammar\grammar.php"><img src="grammar\img\pen.png" width="100px" alt="">Grammar</a></div>
 
         </div>
         <div id="menu_inf">
