@@ -108,7 +108,7 @@ margin-bottom:2em;
 #puntaje{
     height: 50px;
     width:340px;
-    background-color: rgb(79, 157, 226);
+    
     margin:0px 10px 20px 10px;
     font-size: 30px;
     display:flex;
@@ -171,4 +171,24 @@ footer{
     margin:auto;
     font-size:0.7em;
     text-align: center;
+}
+
+#barraProgreso{
+
+    margin:15px 5px;
+    height:20px;
+    width:300px;
+    box-shadow: 3px 3px 5px lightgray;
+    border:1px solid lightgray;
+    border-radius:20px;
+    background-color: white;
+
+
+}
+
+#barra{
+    height:18px;
+    background-color: rgb(134, 192, 48);
+    width: 0%;
+    border-radius:20px;
 }

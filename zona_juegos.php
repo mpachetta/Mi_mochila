@@ -21,6 +21,7 @@ session_start();
 
             $("#b_ranking").click(() => {
                 $("#menu_ranking").toggle();
+                
                 $("#menu_opciones").css('display', 'none');
                 $("#menu_favoritos").css('display', 'none');
             });
@@ -48,7 +49,19 @@ session_start();
             $("#inf_cabecera").hover(()=>{
                 $("#titulo").toggle();
             })
+            
+            cargar_favoritos();
         });
+
+        let cargar_favoritos = ()=>{
+
+            let mis_favoritos=['<a href="grammar/grammar.php"><img src="grammar/img/pen.png" width="100px" alt="">Grammar</a>',
+            '<a href="lectus/lectus.php"><img src="lectus/image/lectus.png" width="100px" alt="">Lectus</a>'];
+            
+            for (i=0;i<mis_favoritos.length;i++){
+                $("#menu_favoritos").append('<div class="favorito">'+mis_favoritos[i]+'</div>');
+            }
+        }
     </script>
     <style>
 
@@ -171,7 +184,8 @@ session_start();
                 </footer>
             </div>
             <div id="menu_favoritos">
-                Mis favoritos
+                
+                
             </div>
             <div id="menu_ranking">
                 <?php include ('model/get_ranking.php')?>

@@ -126,15 +126,15 @@ $(function () {
 
     }
 
-    //     //Barra de progreso
+        //Barra de progreso
 
-    //     progresar = (valor) => {
-    //         porcentaje = valor * 30
-    //         $("#barra").css("width", porcentaje)
+        progresar = (valor) => {
+            porcentaje = valor * 30
+            $("#barra").css("width", porcentaje)
 
-    //     }
+        }
 
-    //     let y = aleatorio(instrumentos_name.length);
+        // let y = aleatorio(instrumentos_name.length);
 
     let relacionar = (event) => {
 
@@ -173,6 +173,7 @@ $(function () {
             
             pantalla_premios(nombre_usuario);
             actual_lista = []
+            progreso=0;
 
 }
 
@@ -186,7 +187,7 @@ $(function () {
         $("#pantallas").empty().append(cont_pantalla_game)
         $("#cajaUsu").append(nombre_usuario)
         $(".cont_pantallas").addClass("w3-animate-opacity")
-        $("#descriptor").append(`Nivel: ${avance}`)
+        // $("#descriptor").append(`Nivel: ${avance}`)
         let y = 0
 
 
@@ -197,11 +198,11 @@ $(function () {
             $("#display").append(lista[y])
 
             actual_lista.push(lista[y])
-            
+            progresar(progreso);
             $("#botonera input").click(relacionar)
 
            
-            $("#pts").append(puntaje)
+            // $("#pts").append(puntaje)
             if (niveles>10){
                 avance++
                 

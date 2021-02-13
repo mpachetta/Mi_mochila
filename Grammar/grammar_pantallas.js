@@ -44,12 +44,13 @@ cont_pantalla_premios = `<div class="cont_pantallas"><img src="img/pen.png" alt=
         </div>`
 
 cont_pantalla_game = `<div class="cont_pantallas">
-<div id="puntaje">
+<div id="barraProgreso"><div id="barra"></div></div>
+
 <div id="cajaUsu"></div>
 <div id="descriptor"></div>
 <div id="pts"></div>
 
-</div>
+
 <div id="display">
 
 
@@ -63,7 +64,7 @@ cont_pantalla_game = `<div class="cont_pantallas">
 </div>
 <div id="devolucion"></div>
 <div id="navegacion">
-<button id='btn_game_volver'>Volver</button></div>`
+<button id='btn_game_volver'>Volver</button></div></div>`
 
 
 
