@@ -10,20 +10,20 @@
 
 }
 
-#caja_juegos div{
+.caja_juegos_int{
 
     width: 135px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     background-color: rgb(240, 243, 243);
-    justify-content: flex-end;
+    justify-content:space-between;
     align-items: center;
     border-radius: 10px;
 
 }
 
-#caja_juegos img {
+#caja_juegos_cont img {
     width: 100px;
     margin-bottom: 5px;
 }
@@ -197,3 +197,14 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   border-radius: 10px;
 }
+
+
+
+.l_favoritos{
+    
+width:25px;
+margin-left:100px;
+margin-top: 4px;
+z-index: 1;
+}
+

@@ -1,0 +1,87 @@
+<script>
+    
+    $(".l_favoritos").click((e)=>{
+
+        let actual=e.currentTarget;
+        let atributo=actual.getAttribute('src');
+        let imgbn='img/favorito_bn.png'
+        let imgcol='img/favorito.png'
+        
+        if(atributo==imgbn){
+            actual.setAttribute("src",imgcol);
+        }else{
+            actual.setAttribute("src",imgbn);
+        }
+          // put_favorite(actual.id);    
+        })
+    
+    /*let put_favorite = (elem) => {
+
+        let caja_elegida=`#caja_juegos_${elem}`
+   
+
+           
+    }  */  
+
+
+</script>
+
+<div class="caja_juegos_int" id="caja_juegos_l_animalario">
+    <div class="caja_b_fav">
+        <img src="img\favorito_bn.png" alt="" id="l_animalario" class="l_favoritos">
+    </div>
+    <div class="caja_juegos_cont">
+        <a href="animalario\animalario.php">
+            <img src="animalario/img/pata.png" width="100px" alt="">Animalario</a>
+    </div>
+
+</div>
+
+<div class="caja_juegos_int" id="caja_juegos_l_elementario">
+    <div class="caja_b_fav">
+        <img src="img\favorito_bn.png" alt="" id="l_elementario" class="l_favoritos">
+    </div>
+    <div class="caja_juegos_cont">
+        <a href="elementario\elementario.php">
+            <img src="elementario/img/casa_ico.png" width="100px" alt="">Elementario</a>
+    </div>
+
+</div>
+
+<div class="caja_juegos_int" id="caja_juegos_l_grammar">
+    <div class="caja_b_fav">
+        <img src="img\favorito_bn.png" alt="" id="l_grammar" class="l_favoritos">
+    </div>
+    <div class="caja_juegos_cont">
+        <a href="grammar\grammar.php">
+            <img src="grammar\img\pen.png" width="100px" alt="">Grammar</a>
+    </div>
+
+</div>
+
+
+
+
+<div class="caja_juegos_int" id="caja_juegos_l_musical">
+    <div class="caja_b_fav">
+        <img src="img\favorito_bn.png" alt="" id="l_musical" class="l_favoritos">
+    </div>
+    <div class="caja_juegos_cont">
+        <a href="musical\musical.php">
+            <img src="Musical\img\logo_headphones.png" width="100px" alt="">Musical</a>
+    </div>
+
+</div>
+
+
+
+<div class="caja_juegos_int" id="caja_juegos_l_lectus">
+    <div class="caja_b_fav">
+        <img src="img\favorito_bn.png" alt="" id="l_lectus" class="l_favoritos">
+    </div>
+    <div class="caja_juegos_cont">
+        <a href="lectus/lectus.php">
+            <img src="lectus/image/lectus.png" width="100px" alt="">Lectus</a>
+    </div>
+
+</div>
