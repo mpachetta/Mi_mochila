@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <head>
+    <title>Posesivos</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+<script src="clases_pantallas.js"></script>
+<link rel="stylesheet" href="grammar_style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(function(){
+
+        let miapp=new Pantallas('Syllabus','Lectura y escritura','nota.png');
+        miapp.pantalla_ini();
+
+        let ir_juego = () =>{
+          miapp.clean();
+          miapp.pantalla_game();
+          miapp.set_boton_game('btn_la','la','crimson');
+          miapp.set_boton_game('btn_el','el','rgb(100, 221, 84)');
+          miapp.set_boton_game('btn_las','las','rgb(20, 140, 220)');
+          miapp.set_boton_game('btn_los','los','rgb(217, 220, 20)');
+
+          miapp.set_imagen_game('img/auto.png')
+        }
+
+        $("#jugar").click(()=>{
+            miapp.clean();
+            miapp.pantalla_selectGame();
+            miapp.set_boton("select_masculino-y-femenino.png",'Escuchar');
+            miapp.set_boton("select_masculino-y-femenino.png",'Leer');
+            miapp.set_boton("select_singular-y-plural2.png",'Escribir');
+
+            $(".boton_select").click(ir_juego);
+            
+        })
+        
+
+
+
+
+    })
+</script>
+  <body></body>
+</html>
